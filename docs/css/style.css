@@ -89,6 +89,11 @@ strong{font-weight:650}
 .wordmark img{height:34px; width:auto; filter:var(--logo-filter)}
 .theme-btn{background:var(--card); border:1px solid var(--line); color:var(--ink); border-radius:99px; width:42px; height:42px; font-size:19px; cursor:pointer; display:flex; align-items:center; justify-content:center}
 .theme-btn:active{transform:scale(.94)}
+.lang-menu{position:absolute; top:50px; right:0; z-index:70; background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow); padding:6px; display:none; min-width:150px}
+.lang-menu.on{display:block}
+.lang-menu button{display:block; width:100%; text-align:left; font:inherit; font-size:15px; padding:9px 14px; border:none; background:none; color:var(--ink); border-radius:9px; cursor:pointer}
+.lang-menu button:hover{background:var(--gold-soft)}
+.lang-menu button.on{background:var(--gold-soft); color:var(--gold-ink); font-weight:700}
 
 /* ---------- hero ---------- */
 .hero{position:relative; max-width:760px; margin:0 auto; overflow:hidden}

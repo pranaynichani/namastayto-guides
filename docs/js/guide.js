@@ -72,6 +72,7 @@ function applyLang(code){
     });
     var q = document.getElementById("placeSearch");
     if(q) q.placeholder = T("searchPh", "Search tacos, coffee, karaoke…");
+    if(typeof paintGuideSearch === "function") paintGuideSearch();
     paintGreeting(); paintHints(); paintPickerBtn();
     if(window.__renderPlaces) window.__renderPlaces();
     if(window.__renderChips) window.__renderChips();
@@ -165,13 +166,29 @@ document.addEventListener("click", function(e){
   } else { toast(txt); }
 });
 
-/* ================= reveal ================= */
+/* ================= reveal + secret pop ================= */
+var secretEl, secretTimer;
+function showSecret(icon, value, copied){
+  if(!secretEl){
+    secretEl = document.createElement("div");
+    secretEl.className = "secret-pop";
+    document.body.appendChild(secretEl);
+    secretEl.addEventListener("click", function(){ secretEl.classList.remove("show"); });
+  }
+  secretEl.innerHTML = '<div class="sp-card"><div class="sp-label">' + icon + '</div><div class="sp-val">' +
+    value + "</div>" + (copied ? '<div class="sp-note">' + T("copiedClip","Copied to clipboard") + "</div>" : "") + "</div>";
+  secretEl.classList.add("show");
+  clearTimeout(secretTimer);
+  secretTimer = setTimeout(function(){ secretEl.classList.remove("show"); }, 4200);
+}
+function secretIcon(r){ return r.closest && r.closest(".essentials") ? "📶" : "🔑"; }
 document.addEventListener("click", function(e){
   var r = e.target.closest && e.target.closest(".reveal");
   if(!r) return;
   if(r.classList.contains("shown")){
     var v = r.getAttribute("data-v");
-    if(v && navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(v).then(function(){ toast(T("copiedClip","Copied to clipboard")); }); }
+    if(v && navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(v).then(function(){}, function(){}); }
+    showSecret(secretIcon(r), v, true);
     return;
   }
   try{
@@ -180,6 +197,8 @@ document.addEventListener("click", function(e){
     r.setAttribute("data-v", val);
     r.classList.add("shown");
     r.removeAttribute("data-i18n");
+    if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(val).then(function(){}, function(){}); }
+    showSecret(secretIcon(r), val, true);
   }catch(err){}
 });
 
@@ -240,12 +259,26 @@ function paintGreeting(){
           : T("greetWelcome","Welcome to");
   greetEl.textContent = txt;
 }
+function torontoTime(){
+  var tz = "America/Toronto";
+  var h = 0, label = "";
+  try{
+    h = parseInt(new Intl.DateTimeFormat("en-US",{timeZone:tz,hour:"2-digit",hour12:false}).format(new Date()),10) % 24;
+    label = new Intl.DateTimeFormat(curLang === "en" ? "en-US" : curLang,
+              {timeZone:tz, hour:"numeric", minute:"2-digit"}).format(new Date());
+  }catch(e){
+    var d = new Date(); h = d.getHours();
+    label = new Intl.DateTimeFormat("en-US",{hour:"numeric",minute:"2-digit",hour12:true}).format(d);
+  }
+  return {h:h, label:label};
+}
 function paintHints(){
   var hintStrip = document.getElementById("hintStrip");
   if(!hintStrip) return;
   var now = new Date(), hr = now.getHours(), day = now.getDay();
+  var tor = torontoTime();
   var hints = [];
-  if(hr >= 22 || hr < 8) hints.push({c:"info", i:"🤫", t:T("hintQuiet","Quiet hours are 11:00 PM – 8:00 AM. Thanks for keeping the volume cozy.")});
+  if(tor.h >= 23 || tor.h < 8) hints.push({c:"info", i:"🤫", t:T("hintQuiet","It's {time} in Toronto — quiet hours (11 PM – 8 AM) are in effect. Thanks for keeping the volume cozy.").replace("{time}", tor.label)});
   if(day === 3 && hr >= 16) hints.push({c:"gold", i:"🗑️", t:T("hintBins","It's Wednesday — bins go to the curb this evening for Thursday morning pickup.")});
   if(hr >= 8 && hr < 11) hints.push({c:"gold", i:"⏰", t:T("hintCheckout","Checking out today? Checkout is at 11:00 AM — message us on Airbnb if you need a hand.")});
   if(hints.length){
@@ -458,11 +491,137 @@ if(placesRoot && window.PLACES){
   render();
 }
 
+/* ================= in-guide search (room guides only) ================= */
+var gsBox, gsInput, gsResults, gsSel = -1, gsMatches = [];
+function buildGuideSearch(){
+  if(!document.getElementById("arrive")) return;   /* room guides only, not aroundus */
+  var bar = document.querySelector(".topbar");
+  if(!bar) return;
+  var btn = document.createElement("button");
+  btn.className = "theme-btn"; btn.id = "guideSearchBtn";
+  btn.type = "button"; btn.textContent = "🔍";
+  btn.setAttribute("aria-label", T("gsearchTitle","Search this guide"));
+  bar.insertBefore(btn, bar.lastChild);   /* left of the language/theme cluster */
+
+  gsBox = document.createElement("div");
+  gsBox.className = "gsearch";
+  gsBox.innerHTML =
+    '<div class="gsearch-panel"><div class="gsearch-bar">' +
+      '<input type="search" id="guideSearchInput" autocomplete="off" enterkeyhint="search">' +
+      '<button class="gsearch-close" aria-label="Close">✕</button></div>' +
+    '<div class="gsearch-results" id="guideSearchResults"></div></div>';
+  document.body.appendChild(gsBox);
+  gsInput = gsBox.querySelector("#guideSearchInput");
+  gsResults = gsBox.querySelector("#guideSearchResults");
+
+  btn.addEventListener("click", openGuideSearch);
+  gsBox.querySelector(".gsearch-close").addEventListener("click", closeGuideSearch);
+  gsBox.addEventListener("click", function(e){ if(e.target === gsBox) closeGuideSearch(); });
+  gsInput.addEventListener("input", renderGuideSearch);
+  gsInput.addEventListener("keydown", function(e){
+    if(e.key === "Escape") return closeGuideSearch();
+    if(e.key === "ArrowDown"){ e.preventDefault(); moveSel(1); }
+    else if(e.key === "ArrowUp"){ e.preventDefault(); moveSel(-1); }
+    else if(e.key === "Enter"){ e.preventDefault(); var m = gsMatches[gsSel < 0 ? 0 : gsSel]; if(m) goToResult(m); }
+  });
+  paintGuideSearch();
+}
+function paintGuideSearch(){
+  if(gsInput) gsInput.placeholder = T("gsearchPh","Search this guide…");
+}
+function txt(el){ return el ? (el.innerText || el.textContent || "").replace(/\s+/g," ").trim() : ""; }
+function buildGuideIndex(){
+  var out = [];
+  var add = function(cat, title, snippet, target){
+    if(!title && !snippet) return;
+    out.push({cat:cat, title:title, snippet:snippet, hay:(title+" "+snippet).toLowerCase(), target:target});
+  };
+  document.querySelectorAll("section.section").forEach(function(sec){
+    var secName = txt(sec.querySelector("h2")).replace(/^✦\s*/,"");
+    sec.querySelectorAll("details.faq-item, details.howto").forEach(function(d){
+      add(secName, txt(d.querySelector("summary")), txt(d.querySelector(".body")), d);
+    });
+    sec.querySelectorAll(".fact").forEach(function(f){
+      add(secName, txt(f.querySelector(".f-t")), txt(f.querySelector(".f-d")), f);
+    });
+    sec.querySelectorAll(".rule").forEach(function(rl){
+      add(secName, txt(rl.querySelector("b")), txt(rl.querySelector("span")), rl);
+    });
+    sec.querySelectorAll(".card > h3").forEach(function(h){
+      add(secName, txt(h), txt(h.parentNode), h.parentNode);
+    });
+    sec.querySelectorAll(".callout").forEach(function(c){
+      add(secName, "", txt(c), c);
+    });
+    sec.querySelectorAll(".steps > li").forEach(function(li){
+      add(secName, txt(li.querySelector("b")), txt(li.querySelector("small")), li);
+    });
+  });
+  return out;
+}
+function renderGuideSearch(){
+  var q = (gsInput.value || "").trim().toLowerCase();
+  gsSel = -1;
+  if(!q){ gsResults.innerHTML = ""; gsMatches = []; return; }
+  var toks = q.split(/\s+/);
+  var idx = buildGuideIndex();
+  gsMatches = idx.filter(function(e){ return toks.every(function(t){ return e.hay.indexOf(t) >= 0; }); });
+  gsMatches.sort(function(a,b){
+    var at = a.title.toLowerCase().indexOf(toks[0]) >= 0 ? 0 : 1;
+    var bt = b.title.toLowerCase().indexOf(toks[0]) >= 0 ? 0 : 1;
+    return at - bt;
+  });
+  gsMatches = gsMatches.slice(0, 14);
+  if(!gsMatches.length){ gsResults.innerHTML = '<div class="gsearch-empty">' + T("gsearchEmpty","No matches — try another word") + "</div>"; return; }
+  var esc = function(s){ return String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); };
+  gsResults.innerHTML = gsMatches.map(function(m, i){
+    return '<button data-i="' + i + '">' +
+      (m.cat ? '<div class="gs-cat">' + esc(m.cat) + "</div>" : "") +
+      (m.title ? '<div class="gs-title">' + esc(m.title) + "</div>" : "") +
+      (m.snippet ? '<div class="gs-snip">' + esc(m.snippet) + "</div>" : "") + "</button>";
+  }).join("");
+  Array.prototype.forEach.call(gsResults.querySelectorAll("button"), function(b){
+    b.addEventListener("click", function(){ goToResult(gsMatches[+b.getAttribute("data-i")]); });
+  });
+}
+function moveSel(d){
+  var btns = gsResults.querySelectorAll("button");
+  if(!btns.length) return;
+  gsSel = (gsSel + d + btns.length) % btns.length;
+  btns.forEach(function(b,i){ b.classList.toggle("sel", i === gsSel); });
+  btns[gsSel].scrollIntoView({block:"nearest"});
+}
+function openDetailsChain(el){
+  var d = el.closest("details");
+  while(d){ d.open = true; d = d.parentElement && d.parentElement.closest("details"); }
+  if(el.tagName === "DETAILS") el.open = true;
+}
+function goToResult(m){
+  if(!m) return;
+  closeGuideSearch();
+  var target = m.target;
+  openDetailsChain(target);
+  setTimeout(function(){
+    var y = target.getBoundingClientRect().top + window.scrollY - 96;
+    window.scrollTo({top: y < 0 ? 0 : y, behavior:"smooth"});
+    target.classList.add("search-flash");
+    setTimeout(function(){ target.classList.remove("search-flash"); }, 1700);
+  }, 60);
+}
+function openGuideSearch(){
+  gsBox.classList.add("on");
+  gsInput.value = ""; gsResults.innerHTML = ""; gsMatches = []; gsSel = -1;
+  setTimeout(function(){ gsInput.focus(); }, 40);
+}
+function closeGuideSearch(){ if(gsBox) gsBox.classList.remove("on"); }
+
 /* ================= boot ================= */
+buildGuideSearch();
 buildPicker();
 paintThemeBtn();
 paintGreeting();
 paintHints();
+setInterval(paintHints, 60000);   /* keep the Toronto clock in the quiet-hours banner current */
 var startLang = "";
 try{ startLang = localStorage.getItem("nsto-lang") || ""; }catch(e){}
 if(!startLang){

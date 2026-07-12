@@ -530,12 +530,269 @@ function paintGuideSearch(){
   if(gsInput) gsInput.placeholder = T("gsearchPh","Search this guide…");
 }
 function txt(el){ return el ? (el.innerText || el.textContent || "").replace(/\s+/g," ").trim() : ""; }
+/* Search synonyms, per language. Typing any word in a group also finds the others,
+   so "trash" finds the "garbage" card. Only ADD entries — expansion never hides results.
+   Proper nouns (Kumbah, Oliver, Ossington, TTC, Green P, Roku) stay in the content in
+   every language, so keep them in each language's groups when translating. */
+var SEARCH_SYN = {
+  en: [
+    ["garbage","trash","rubbish","bin","bins","waste","litter","recycle","recycling","compost","dispose","disposal"],
+    ["wifi","wi-fi","internet","wireless","network","password","hotspot"],
+    ["ac","air conditioning","air conditioner","aircon","cooling","heat","heater","heating","thermostat","temperature","warm","cold","blanket","climate"],
+    ["checkout","check-out","leaving","depart","departure"],
+    ["checkin","check-in","arrival","arriving"],
+    ["laundry","washer","washing","dryer","detergent","wash"],
+    ["parking","park","car","permit","green p","vehicle"],
+    ["subway","metro","ttc","transit","train","ossington","station","line 2"],
+    ["pets","pet","dog","cat","kumbah","oliver","allergy","allergies","hypoallergenic"],
+    ["luggage","bags","bag","suitcase","baggage","storage","drop-off","drop off"],
+    ["quiet","noise","noisy","volume","loud","sleep","earplugs"],
+    ["kitchen","cook","cooking","stove","fridge","refrigerator","food","microwave","dishes"],
+    ["towel","towels"],
+    ["bidet","washlet"],
+    ["iron","ironing"],
+    ["shower","bath","bathroom","washroom","toilet","tub"],
+    ["door","key","code","keypad","lock","entrance"],
+    ["tv","television","roku","remote","netflix"],
+    ["smoke","smoking","cigarette","vape","vaping"],
+    ["emergency","fire","911","exit","safety"],
+    ["umbrella","rain","weather"],
+    ["coffee","tea","kettle","espresso"],
+    ["address","location","directions","map"]
+  ],
+  fr: [
+    ["poubelle","poubelles","ordures","déchets","recyclage","recycler","compost","tri","corbeille","détritus"],
+    ["wifi","wi-fi","internet","sans fil","réseau","mot de passe"],
+    ["climatisation","clim","climatiseur","air conditionné","chauffage","chauffer","radiateur","température","froid","chaud","couverture","thermostat"],
+    ["départ","check-out","partir","quitter","fin de séjour"],
+    ["arrivée","check-in","enregistrement","arriver"],
+    ["laverie","lessive","lave-linge","machine à laver","sèche-linge","laver","linge","détergent"],
+    ["stationnement","parking","garer","voiture","permis","auto","véhicule"],
+    ["métro","ttc","transport","train","ossington","station","ligne 2","tramway"],
+    ["animaux","animal","chien","chienne","chat","kumbah","oliver","allergie","allergies"],
+    ["bagages","valise","valises","sac","sacs","consigne","dépôt"],
+    ["silence","calme","bruit","volume","dormir","sommeil","tranquille"],
+    ["cuisine","cuisiner","cuisinière","réfrigérateur","frigo","nourriture","micro-ondes","vaisselle","plaque"],
+    ["serviette","serviettes"],
+    ["bidet"],
+    ["fer","fer à repasser","repasser","repassage"],
+    ["douche","salle de bain","bain","toilette","toilettes","wc","baignoire","lavabo"],
+    ["porte","clé","clef","code","clavier","serrure","entrée","verrou"],
+    ["télé","télévision","roku","télécommande","netflix"],
+    ["fumer","fumée","cigarette","tabac","vapoter"],
+    ["urgence","urgences","feu","incendie","911","sortie","secours","sécurité"],
+    ["parapluie","pluie","météo","temps"],
+    ["café","thé","bouilloire","expresso"],
+    ["adresse","emplacement","localisation","itinéraire","direction","carte","plan"]
+  ],
+  es: [
+    ["basura","desperdicios","desechos","reciclaje","reciclar","compost","cubo","papelera","tacho"],
+    ["wifi","wi-fi","internet","inalámbrico","red","contraseña","clave"],
+    ["aire acondicionado","aire","clima","calefacción","calentador","calor","frío","temperatura","manta","termostato"],
+    ["salida","check-out","partida","irse","dejar"],
+    ["entrada","llegada","check-in","registro","llegar"],
+    ["lavandería","lavadora","secadora","lavar","ropa","detergente","colada"],
+    ["estacionamiento","aparcamiento","parking","coche","carro","auto","permiso","vehículo"],
+    ["metro","subte","ttc","transporte","tren","ossington","estación","línea 2","tranvía"],
+    ["mascotas","mascota","perro","perra","gato","kumbah","oliver","alergia","alergias"],
+    ["equipaje","maleta","maletas","bolsa","bolsas","consigna","guardar"],
+    ["silencio","ruido","volumen","dormir","sueño","tapones","tranquilo"],
+    ["cocina","cocinar","estufa","fogón","refrigerador","nevera","heladera","comida","microondas","platos"],
+    ["toalla","toallas"],
+    ["bidé","bidet"],
+    ["plancha","planchar","planchado"],
+    ["ducha","baño","bañera","tina","inodoro","lavabo","aseo"],
+    ["puerta","llave","código","teclado","cerradura","entrada","cerrojo"],
+    ["tele","televisión","televisor","roku","control remoto","mando","netflix"],
+    ["fumar","humo","cigarrillo","tabaco","vapear"],
+    ["emergencia","emergencias","fuego","incendio","911","salida","seguridad"],
+    ["paraguas","sombrilla","lluvia","clima","tiempo"],
+    ["café","té","tetera","hervidor","espresso"],
+    ["dirección","ubicación","localización","cómo llegar","mapa"]
+  ],
+  de: [
+    ["müll","abfall","recycling","wiederverwertung","kompost","mülleimer","tonne","biomüll"],
+    ["wlan","wifi","wi-fi","internet","drahtlos","netzwerk","passwort","kennwort"],
+    ["klimaanlage","klima","kühlung","heizung","heizen","heizkörper","temperatur","kalt","warm","decke","thermostat"],
+    ["abreise","check-out","auschecken","abfahrt","verlassen"],
+    ["anreise","ankunft","check-in","einchecken","ankommen"],
+    ["wäsche","waschküche","waschmaschine","trockner","waschen","waschmittel"],
+    ["parken","parkplatz","auto","wagen","fahrzeug","genehmigung","parkschein"],
+    ["u-bahn","ubahn","metro","ttc","transit","zug","ossington","station","linie 2","straßenbahn"],
+    ["haustiere","haustier","hund","hündin","katze","kumbah","oliver","allergie","allergien"],
+    ["gepäck","koffer","tasche","taschen","aufbewahrung"],
+    ["ruhe","ruhezeiten","lärm","geräusch","lautstärke","schlafen","ohrstöpsel","leise"],
+    ["küche","kochen","herd","kühlschrank","essen","lebensmittel","mikrowelle","geschirr"],
+    ["handtuch","handtücher"],
+    ["bidet"],
+    ["bügeleisen","bügeln","bügelbrett"],
+    ["dusche","bad","badezimmer","wanne","badewanne","toilette","wc","waschbecken"],
+    ["tür","schlüssel","code","tastenfeld","schloss","eingang","riegel"],
+    ["fernseher","fernsehen","roku","fernbedienung","netflix"],
+    ["rauchen","rauch","zigarette","tabak","dampfen"],
+    ["notfall","feuer","brand","911","ausgang","notausgang","sicherheit"],
+    ["regenschirm","schirm","regen","wetter"],
+    ["kaffee","tee","wasserkocher","espresso"],
+    ["adresse","standort","lage","wegbeschreibung","richtung","karte"]
+  ],
+  pt: [
+    ["lixo","resíduos","reciclagem","reciclar","compostagem","compost","lixeira","cesto"],
+    ["wifi","wi-fi","internet","sem fio","rede","senha","palavra-passe"],
+    ["ar condicionado","ar","clima","refrigeração","aquecimento","aquecedor","calor","frio","temperatura","cobertor","manta","termostato"],
+    ["saída","check-out","partida","sair","deixar"],
+    ["entrada","chegada","check-in","registro","chegar"],
+    ["lavanderia","lavandaria","máquina de lavar","secadora","lavar","roupa","detergente"],
+    ["estacionamento","parque","carro","auto","permissão","veículo"],
+    ["metrô","metro","ttc","transporte","trem","comboio","ossington","estação","linha 2","bonde","elétrico"],
+    ["animais","animal","cachorro","cão","cadela","gato","kumbah","oliver","alergia","alergias"],
+    ["bagagem","mala","malas","bolsa","bolsas","guarda-volumes","armazenamento"],
+    ["silêncio","barulho","ruído","volume","dormir","sono","tampões","tranquilo"],
+    ["cozinha","cozinhar","fogão","geladeira","frigorífico","comida","micro-ondas","louça"],
+    ["toalha","toalhas"],
+    ["bidê","bidet"],
+    ["ferro","ferro de passar","passar","engomar"],
+    ["chuveiro","banho","banheiro","casa de banho","banheira","vaso","sanitário","pia","lavatório"],
+    ["porta","chave","código","teclado","fechadura","entrada","trava"],
+    ["televisão","tv","roku","controle remoto","comando","netflix"],
+    ["fumar","fumaça","cigarro","tabaco","vapear"],
+    ["emergência","fogo","incêndio","911","saída","segurança"],
+    ["guarda-chuva","sombrinha","chuva","tempo","clima"],
+    ["café","chá","chaleira","expresso","espresso"],
+    ["endereço","localização","local","como chegar","direção","mapa"]
+  ],
+  ko: [
+    ["쓰레기","분리수거","재활용","퇴비","음식물","휴지통"],
+    ["와이파이","wifi","인터넷","무선","네트워크","비밀번호","암호","패스워드"],
+    ["에어컨","냉방","난방","히터","온도","추워","더워","따뜻","담요"],
+    ["체크아웃","퇴실","출발","떠나","나가"],
+    ["체크인","입실","도착","들어"],
+    ["세탁","빨래","세탁기","건조기","세제"],
+    ["주차","주차장","자동차","허가증","차량"],
+    ["지하철","전철","ttc","교통","기차","오싱턴","ossington","2호선","노선","전차"],
+    ["반려동물","애완동물","강아지","고양이","쿰바","kumbah","올리버","oliver","알레르기"],
+    ["짐","수하물","캐리어","가방","보관"],
+    ["정숙","조용","소음","시끄","볼륨","수면","귀마개"],
+    ["주방","부엌","요리","가스레인지","냉장고","음식","전자레인지","그릇","설거지"],
+    ["수건","타월"],
+    ["비데","bidet"],
+    ["다리미","다림질"],
+    ["샤워","욕실","화장실","목욕","욕조","변기","세면대"],
+    ["열쇠","코드","비밀번호","키패드","잠금","도어락","입구","현관"],
+    ["티비","텔레비전","로쿠","roku","리모컨","넷플릭스","netflix"],
+    ["흡연","담배","연기","금연","전자담배"],
+    ["비상","응급","화재","출구","비상구","안전"],
+    ["우산","날씨"],
+    ["커피","주전자","에스프레소"],
+    ["주소","위치","길찾기","방향","지도","오시는 길"]
+  ],
+  zh: [
+    ["垃圾","废物","回收","分类","堆肥","厨余","垃圾桶"],
+    ["wifi","无线","网络","上网","互联网","密码"],
+    ["空调","冷气","制冷","暖气","加热","取暖器","温度","毯子","恒温"],
+    ["退房","离开","出发","退宿"],
+    ["入住","到达","登记","抵达"],
+    ["洗衣","洗衣机","烘干机","洗涤剂","洗衣液","衣服"],
+    ["停车","车位","汽车","许可","车辆"],
+    ["地铁","ttc","交通","火车","轻轨","有轨电车","2号线","ossington"],
+    ["宠物","kumbah","oliver","过敏"],
+    ["行李","箱子","寄存","存放"],
+    ["安静","噪音","声音","音量","睡觉","睡眠","耳塞"],
+    ["厨房","做饭","炉子","灶","冰箱","食物","微波炉","餐具"],
+    ["毛巾","浴巾"],
+    ["坐浴盆","洁身器","bidet"],
+    ["熨斗","熨衣","熨烫"],
+    ["淋浴","浴室","洗澡","卫生间","浴缸","马桶","洗手间","水槽"],
+    ["钥匙","密码","键盘","门锁","入口","大门"],
+    ["电视","roku","遥控器","奈飞","netflix"],
+    ["吸烟","抽烟","香烟","电子烟"],
+    ["紧急","火灾","出口","安全"],
+    ["雨伞","下雨","天气"],
+    ["咖啡","水壶","浓缩咖啡","意式"],
+    ["地址","位置","路线","方向","地图","怎么走"]
+  ],
+  ja: [
+    ["ゴミ","ごみ","生ゴミ","リサイクル","分別","コンポスト","堆肥"],
+    ["wifi","ワイファイ","無線","ネット","インターネット","パスワード","暗証"],
+    ["エアコン","冷房","暖房","ヒーター","温度","寒い","暑い","毛布","サーモスタット"],
+    ["チェックアウト","退室","出発"],
+    ["チェックイン","到着","入室"],
+    ["洗濯","洗濯機","乾燥機","洗剤","ランドリー"],
+    ["駐車","駐車場","許可","車両","パーキング"],
+    ["地下鉄","電車","ttc","交通","路面電車","2号線","ossington","メトロ"],
+    ["ペット","クンバ","kumbah","オリバー","oliver","アレルギー"],
+    ["荷物","スーツケース","バッグ","かばん","保管"],
+    ["静か","静粛","騒音","音量","睡眠","耳栓","うるさ"],
+    ["キッチン","台所","料理","コンロ","冷蔵庫","食べ物","電子レンジ","食器"],
+    ["タオル"],
+    ["ビデ","bidet"],
+    ["アイロン"],
+    ["シャワー","浴室","風呂","トイレ","バスタブ","洗面"],
+    ["ドア","鍵","暗証番号","キーパッド","ロック","入口","玄関"],
+    ["テレビ","roku","ロク","リモコン","ネットフリックス","netflix"],
+    ["喫煙","タバコ","たばこ","禁煙","電子タバコ"],
+    ["緊急","火事","出口","非常口","安全"],
+    ["傘","天気"],
+    ["コーヒー","お茶","ケトル","やかん","エスプレッソ"],
+    ["住所","場所","行き方","道順","地図","アクセス"]
+  ],
+  hi: [
+    ["कचरा","कूड़ा","कूड़ेदान","रीसाइक्लिंग","रीसायकल","कम्पोस्ट","खाद","garbage","trash"],
+    ["वाईफाई","wifi","इंटरनेट","इन्टरनेट","नेटवर्क","पासवर्ड","वायरलेस"],
+    ["एसी","ac","वातानुकूलन","हीटर","हीटिंग","तापमान","ठंड","गरम","कंबल","कम्बल"],
+    ["चेक-आउट","चेकआउट","checkout","प्रस्थान","निकल"],
+    ["चेक-इन","चेकइन","checkin","आगमन","पहुंच"],
+    ["लॉन्ड्री","कपड़े धोना","वॉशर","वॉशिंग मशीन","ड्रायर","धोना","डिटर्जेंट","laundry"],
+    ["पार्किंग","parking","गाड़ी","कार","परमिट","वाहन"],
+    ["सबवे","मेट्रो","ttc","ट्रेन","परिवहन","ossington","स्टेशन","लाइन 2","subway"],
+    ["पालतू","कुत्ता","बिल्ली","कुम्बा","kumbah","ओलिवर","oliver","एलर्जी","pets","dog"],
+    ["सामान","बैग","सूटकेस","लगेज","भंडारण","luggage"],
+    ["शांति","शोर","आवाज़","वॉल्यूम","सोना","नींद","इयरप्लग","quiet"],
+    ["रसोई","किचन","खाना बनाना","चूल्हा","फ्रिज","रेफ्रिजरेटर","भोजन","माइक्रोवेव","बर्तन","kitchen"],
+    ["तौलिया","तौलिये","towel"],
+    ["बिडेट","bidet"],
+    ["इस्त्री","प्रेस","iron"],
+    ["शावर","बाथरूम","स्नान","नहाना","टॉयलेट","शौचालय","बाथटब","shower","toilet"],
+    ["दरवाज़ा","दरवाजा","चाबी","कुंजी","कोड","कीपैड","ताला","प्रवेश","door","key"],
+    ["टीवी","tv","टेलीविजन","रोकू","roku","रिमोट","नेटफ्लिक्स","netflix"],
+    ["धूम्रपान","सिगरेट","धुआं","तंबाकू","वेप","smoking"],
+    ["आपातकाल","आग","निकास","सुरक्षा","emergency","fire","exit"],
+    ["छाता","बारिश","मौसम","umbrella","rain"],
+    ["कॉफी","चाय","केतली","एस्प्रेसो","coffee","tea"],
+    ["पता","स्थान","रास्ता","दिशा","नक्शा","मानचित्र","address","map"]
+  ]
+};
+function fold(s){ return String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); }
+function expandToken(t){
+  var groups = SEARCH_SYN[curLang] || SEARCH_SYN.en, set = [t];
+  for(var i=0;i<groups.length;i++){
+    var g = groups[i], hit = false;
+    for(var j=0;j<g.length;j++){ if(fold(g[j]) === t){ hit = true; break; } }
+    if(hit) for(var k=0;k<g.length;k++){ var fw = fold(g[k]); if(set.indexOf(fw) < 0) set.push(fw); }
+  }
+  return set;
+}
+function tokenInHay(hay, w){
+  /* short latin words (ac, tv, tri, car, key…) match whole-word only, so "tri" doesn't hit "distributeurs" */
+  if(w.length <= 3 && /^[a-z0-9]+$/.test(w)) return new RegExp("(^|[^a-z0-9])" + w + "([^a-z0-9]|$)").test(hay);
+  return hay.indexOf(w) >= 0;
+}
+function hayHasToken(hay, t){
+  var set = expandToken(t);
+  for(var k=0;k<set.length;k++){ if(tokenInHay(hay, set[k])) return true; }
+  return false;
+}
 function buildGuideIndex(){
   var out = [];
   var add = function(cat, title, snippet, target){
     if(!title && !snippet) return;
-    out.push({cat:cat, title:title, snippet:snippet, hay:(title+" "+snippet).toLowerCase(), target:target});
+    out.push({cat:cat, title:title, snippet:snippet, hay:fold(title+" "+snippet), target:target});
   };
+  var ess = document.querySelector(".essentials");
+  if(ess) ess.querySelectorAll(".ess-item").forEach(function(it){
+    add("", txt(it.querySelector(".ess-label")), txt(it.querySelector(".ess-value, .ess-act, .reveal")), it);
+  });
+  var nudge = document.querySelector(".nudge");
+  if(nudge) add("", txt(nudge.querySelector("h3")), txt(nudge), nudge);
   document.querySelectorAll("section.section").forEach(function(sec){
     var secName = txt(sec.querySelector("h2")).replace(/^✦\s*/,"");
     sec.querySelectorAll("details.faq-item, details.howto").forEach(function(d){
@@ -560,15 +817,15 @@ function buildGuideIndex(){
   return out;
 }
 function renderGuideSearch(){
-  var q = (gsInput.value || "").trim().toLowerCase();
+  var q = fold((gsInput.value || "").trim());
   gsSel = -1;
   if(!q){ gsResults.innerHTML = ""; gsMatches = []; return; }
   var toks = q.split(/\s+/);
   var idx = buildGuideIndex();
-  gsMatches = idx.filter(function(e){ return toks.every(function(t){ return e.hay.indexOf(t) >= 0; }); });
+  gsMatches = idx.filter(function(e){ return toks.every(function(t){ return hayHasToken(e.hay, t); }); });
   gsMatches.sort(function(a,b){
-    var at = a.title.toLowerCase().indexOf(toks[0]) >= 0 ? 0 : 1;
-    var bt = b.title.toLowerCase().indexOf(toks[0]) >= 0 ? 0 : 1;
+    var at = fold(a.title).indexOf(toks[0]) >= 0 ? 0 : 1;
+    var bt = fold(b.title).indexOf(toks[0]) >= 0 ? 0 : 1;
     return at - bt;
   });
   gsMatches = gsMatches.slice(0, 14);

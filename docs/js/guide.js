@@ -493,6 +493,7 @@ if(placesRoot && window.PLACES){
 
 /* ================= in-guide search (room guides only) ================= */
 var gsBox, gsInput, gsResults, gsSel = -1, gsMatches = [];
+var gsButtons = [];
 function buildGuideSearch(){
   if(!document.getElementById("arrive")) return;   /* room guides only, not aroundus */
   var bar = document.querySelector(".topbar");
@@ -502,6 +503,19 @@ function buildGuideSearch(){
   btn.type = "button"; btn.textContent = "🔍";
   btn.setAttribute("aria-label", T("gsearchTitle","Search this guide"));
   bar.insertBefore(btn, bar.lastChild);   /* left of the language/theme cluster */
+  btn.addEventListener("click", openGuideSearch);
+  gsButtons.push(btn);
+
+  var jnav = document.querySelector(".jnav");
+  if(jnav){
+    var jbtn = document.createElement("button");
+    jbtn.className = "jnav-search"; jbtn.id = "jnavSearchBtn";
+    jbtn.type = "button"; jbtn.textContent = "🔍";
+    jbtn.setAttribute("aria-label", T("gsearchTitle","Search this guide"));
+    jbtn.addEventListener("click", openGuideSearch);
+    jnav.appendChild(jbtn);
+    gsButtons.push(jbtn);
+  }
 
   gsBox = document.createElement("div");
   gsBox.className = "gsearch";
@@ -514,7 +528,6 @@ function buildGuideSearch(){
   gsInput = gsBox.querySelector("#guideSearchInput");
   gsResults = gsBox.querySelector("#guideSearchResults");
 
-  btn.addEventListener("click", openGuideSearch);
   gsBox.querySelector(".gsearch-close").addEventListener("click", closeGuideSearch);
   gsBox.addEventListener("click", function(e){ if(e.target === gsBox) closeGuideSearch(); });
   gsInput.addEventListener("input", renderGuideSearch);
@@ -528,6 +541,7 @@ function buildGuideSearch(){
 }
 function paintGuideSearch(){
   if(gsInput) gsInput.placeholder = T("gsearchPh","Search this guide…");
+  gsButtons.forEach(function(b){ b.setAttribute("aria-label", T("gsearchTitle","Search this guide")); });
 }
 function txt(el){ return el ? (el.innerText || el.textContent || "").replace(/\s+/g," ").trim() : ""; }
 /* Search synonyms, per language. Typing any word in a group also finds the others,
@@ -552,7 +566,7 @@ var SEARCH_SYN = {
     ["bidet","washlet"],
     ["iron","ironing"],
     ["shower","bath","bathroom","washroom","toilet","tub"],
-    ["door","key","code","keypad","lock","entrance"],
+    ["door","key","keys","code","keypad","lock","entrance"],
     ["tv","television","roku","remote","netflix"],
     ["smoke","smoking","cigarette","vape","vaping"],
     ["emergency","fire","911","exit","safety"],
@@ -577,7 +591,7 @@ var SEARCH_SYN = {
     ["bidet"],
     ["fer","fer à repasser","repasser","repassage"],
     ["douche","salle de bain","bain","toilette","toilettes","wc","baignoire","lavabo"],
-    ["porte","clé","clef","code","clavier","serrure","entrée","verrou"],
+    ["porte","clé","clés","clef","code","clavier","serrure","entrée","verrou"],
     ["télé","télévision","roku","télécommande","netflix"],
     ["fumer","fumée","cigarette","tabac","vapoter"],
     ["urgence","urgences","feu","incendie","911","sortie","secours","sécurité"],
@@ -602,7 +616,7 @@ var SEARCH_SYN = {
     ["bidé","bidet"],
     ["plancha","planchar","planchado"],
     ["ducha","baño","bañera","tina","inodoro","lavabo","aseo"],
-    ["puerta","llave","código","teclado","cerradura","entrada","cerrojo"],
+    ["puerta","llave","llaves","código","teclado","cerradura","entrada","cerrojo"],
     ["tele","televisión","televisor","roku","control remoto","mando","netflix"],
     ["fumar","humo","cigarrillo","tabaco","vapear"],
     ["emergencia","emergencias","fuego","incendio","911","salida","seguridad"],
@@ -652,7 +666,7 @@ var SEARCH_SYN = {
     ["bidê","bidet"],
     ["ferro","ferro de passar","passar","engomar"],
     ["chuveiro","banho","banheiro","casa de banho","banheira","vaso","sanitário","pia","lavatório"],
-    ["porta","chave","código","teclado","fechadura","entrada","trava"],
+    ["porta","chave","chaves","código","teclado","fechadura","entrada","trava"],
     ["televisão","tv","roku","controle remoto","comando","netflix"],
     ["fumar","fumaça","cigarro","tabaco","vapear"],
     ["emergência","fogo","incêndio","911","saída","segurança"],
@@ -785,7 +799,7 @@ function buildGuideIndex(){
   var out = [];
   var add = function(cat, title, snippet, target){
     if(!title && !snippet) return;
-    out.push({cat:cat, title:title, snippet:snippet, hay:fold(title+" "+snippet), target:target});
+    out.push({cat:cat, title:title, snippet:snippet, hay:fold(cat+" "+title+" "+snippet), target:target});
   };
   var ess = document.querySelector(".essentials");
   if(ess) ess.querySelectorAll(".ess-item").forEach(function(it){
@@ -795,6 +809,9 @@ function buildGuideIndex(){
   if(nudge) add("", txt(nudge.querySelector("h3")), txt(nudge), nudge);
   document.querySelectorAll("section.section").forEach(function(sec){
     var secName = txt(sec.querySelector("h2")).replace(/^✦\s*/,"");
+    var leads = sec.querySelectorAll("p.lead");
+    add(secName, secName, txt(leads[0]), sec.querySelector("h2"));
+    for(var li2 = 1; li2 < leads.length; li2++) add(secName, "", txt(leads[li2]), leads[li2]);
     sec.querySelectorAll("details.faq-item, details.howto").forEach(function(d){
       add(secName, txt(d.querySelector("summary")), txt(d.querySelector(".body")), d);
     });
@@ -802,7 +819,7 @@ function buildGuideIndex(){
       add(secName, txt(f.querySelector(".f-t")), txt(f.querySelector(".f-d")), f);
     });
     sec.querySelectorAll(".rule").forEach(function(rl){
-      add(secName, txt(rl.querySelector("b")), txt(rl.querySelector("span")), rl);
+      add(secName, txt(rl.querySelector("b")), txt(rl.querySelector("div > span")), rl);
     });
     sec.querySelectorAll(".card > h3").forEach(function(h){
       add(secName, txt(h), txt(h.parentNode), h.parentNode);
@@ -821,8 +838,12 @@ function renderGuideSearch(){
   gsSel = -1;
   if(!q){ gsResults.innerHTML = ""; gsMatches = []; return; }
   var toks = q.split(/\s+/);
+  var joined = toks.length > 1 ? toks.join("") : null;
   var idx = buildGuideIndex();
-  gsMatches = idx.filter(function(e){ return toks.every(function(t){ return hayHasToken(e.hay, t); }); });
+  gsMatches = idx.filter(function(e){
+    if(toks.every(function(t){ return hayHasToken(e.hay, t); })) return true;
+    return joined ? hayHasToken(e.hay, joined) : false;
+  });
   gsMatches.sort(function(a,b){
     var at = fold(a.title).indexOf(toks[0]) >= 0 ? 0 : 1;
     var bt = fold(b.title).indexOf(toks[0]) >= 0 ? 0 : 1;

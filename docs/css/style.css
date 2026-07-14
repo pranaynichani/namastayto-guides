@@ -118,13 +118,16 @@ strong{font-weight:650}
 .ess-act{border:none; background:none; padding:0; text-align:left; font:inherit; color:var(--link); font-weight:560; cursor:pointer; font-size:15.5px}
 
 /* ---------- pills journey nav ---------- */
-.jnav{position:sticky; top:0; z-index:30; background:var(--bg); border-bottom:1px solid var(--line); margin-top:20px}
-.jnav-inner{display:flex; gap:8px; overflow-x:auto; padding:10px 18px; max-width:760px; margin:0 auto; scrollbar-width:none}
+.jnav{position:sticky; top:0; z-index:30; background:var(--bg); border-bottom:1px solid var(--line); margin-top:20px; display:flex; align-items:center}
+.jnav-inner{display:flex; gap:8px; overflow-x:auto; padding:10px 18px; max-width:760px; margin:0 auto; scrollbar-width:none; flex:1 1 auto; min-width:0}
 .jnav-inner::-webkit-scrollbar{display:none}
 .jnav a{flex-shrink:0; text-decoration:none; font-size:14px; font-weight:560; color:var(--muted); background:var(--card); border:1px solid var(--line); padding:7px 14px; border-radius:99px; white-space:nowrap}
 .jnav a.on{background:var(--gold); border-color:var(--gold); color:#3A2800}
 html[data-theme="dark"] .jnav a.on{color:#2A1E05}
 @media (prefers-color-scheme: dark){ html:not([data-theme="light"]) .jnav a.on{color:#2A1E05} }
+.jnav-search{position:relative; flex-shrink:0; width:40px; height:40px; margin:0 18px 0 2px; background:var(--card); border:1px solid var(--line); color:var(--ink); border-radius:99px; font-size:17px; cursor:pointer; display:flex; align-items:center; justify-content:center}
+.jnav-search:active{transform:scale(.94)}
+.jnav-search::before{content:""; position:absolute; left:-18px; top:0; bottom:0; width:18px; background:linear-gradient(to right, transparent, var(--bg)); pointer-events:none}
 
 /* ---------- sections ---------- */
 .section{padding:34px 0 6px}

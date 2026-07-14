@@ -511,7 +511,10 @@
   "🏒 Toronto Maple Leafs": "🏒 टोरंटो मेपल लीफ़्स",
   "Prefer door-to-door? <a href=\"https://www.welcomepickups.com\" target=\"_blank\" rel=\"noopener\">Pre-book an airport transfer</a> and skip the transit altogether.": "दरवाज़े तक की सेवा चाहिए? <a href=\"https://www.welcomepickups.com\" target=\"_blank\" rel=\"noopener\">एयरपोर्ट ट्रांसफर पहले से बुक करें</a> और पब्लिक ट्रांज़िट को पूरी तरह छोड़ दें।",
   "MLB baseball at the Rogers Centre, right by the CN Tower.": "रॉजर्स सेंटर में MLB बेसबॉल मैच, CN टावर के बिल्कुल पास।",
-  "⚾ Toronto Blue Jays": "⚾ टोरंटो ब्लू जेज़"
+  "⚾ Toronto Blue Jays": "⚾ टोरंटो ब्लू जेज़",
+  "Don't have a car? <!-- AFF-PLACEHOLDER: discovercars --><a href=\"https://www.discovercars.com\" target=\"_blank\" rel=\"noopener\">Rent one for the day</a> — compares all the major rental brands at once.": "गाड़ी नहीं है? <!-- AFF-PLACEHOLDER: discovercars --><a href=\"https://www.discovercars.com\" target=\"_blank\" rel=\"noopener\">एक दिन के लिए किराए पर लें</a> — सभी बड़ी रेंटल कंपनियों की तुलना एक साथ करें।",
+  "🚗 Rent a car": "🚗 कार किराए पर लें",
+  "Planning a Niagara or day-trip drive? <!-- AFF-PLACEHOLDER: discovercars --><a href=\"https://www.discovercars.com\" target=\"_blank\" rel=\"noopener\">Discover Cars</a> compares all the major rental brands in one search.": "नियाग्रा या डे-ट्रिप ड्राइव की योजना बना रहे हैं? <!-- AFF-PLACEHOLDER: discovercars --><a href=\"https://www.discovercars.com\" target=\"_blank\" rel=\"noopener\">Discover Cars</a> सभी बड़ी रेंटल कंपनियों की तुलना एक ही खोज में कर देता है।"
  },
  "places": {
   "Cafe Paradise": {

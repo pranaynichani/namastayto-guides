@@ -1,6 +1,6 @@
 /* NamastayTO guide service worker — caches the guide for full offline use.
    No analytics, no external requests: it only ever caches this site's own files. */
-var VERSION = "nsto-v6";
+var VERSION = "nsto-v7";
 var CORE = [
   "css/style.css",
   "js/guide.js",

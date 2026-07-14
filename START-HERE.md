@@ -31,6 +31,7 @@ Plain HTML/CSS/JS, no build step. Same pattern as the portfolio & hospital sites
 - **WiFi / room-code reveal** — shows a big centred popup (`.secret-pop`) with the value + "copied", so it's never hidden behind the quickbar.
 - **WhatsApp quickbar button** — inline SVG glyph (`.wa-ico`, brand green `#25D366`) → `wa.me/16477079594`, in all 4 guides.
 - **TTC badges** — red `<span class="ttc">TTC</span>` on the subway/streetcar arrival steps.
+- **Checkout section** (`id="checkout"`, all 3 room guides) — 5 shared items + room-specific towels/food-waste/lock-up items, in a `.rules`-style checklist grid; nav pill scrolls to it.
 - **Quiet-hours auto banner** — `paintHints()` uses `torontoTime()` (Intl `America/Toronto`); only shows 11 PM–8 AM **Toronto time** and prints the live Toronto clock. There's also a static quiet-hours reminder callout near the bottom of each room.
 
 Editing tools live in `tools/` (outside docs/, not published):
@@ -58,13 +59,14 @@ Drop the image in the right `docs/assets/img/<room>/` (or `shared/`) folder and 
 ### 4. Update the 9 languages after any English change
 Translations are keyed to the exact English text. Each `data-i18n="…"` key is `md5(normalised-innerHTML)[:8]`, mapped to English in `docs/js/i18n/_corpus.json`.
 
-> ⚠️ **Do NOT run `tools/i18n_extract.py`.** Its current version is lossy — it silently drops ~48 already-translated strings (every callout, the jnav/quickbar labels, and the house rules) and rewrites `_corpus.json`, which breaks translations across the whole site. It does not manage those elements, so re-running it removes their keys. (Fixing that script is a separate future task — see below.)
+`tools/i18n_extract.py` is safe to run now (fixed — it preserves every already-keyed element on re-runs and discovers new ones, including bare `<b>`/`<span>` inside `.rule` cards).
 
-The safe way to change/add a string:
-1. Edit the English in the room HTML. For a **changed** string the key must change too: compute `md5(normalised new innerHTML)[:8]`, set it as the new `data-i18n`, and add `newkey → English` to `_corpus.json` (a tiny throwaway Python script is easiest — the chat can do this).
-2. Add the matching English→translation entry in each `tools/translations/<lang>.json` (8: fr, es, de, pt, ko, zh, ja, hi). UI/JS-built labels go in the `"ui"` section instead (keyed by name, not English).
-3. `python3 tools/build_lang.py` — compiles them into `docs/js/i18n/*.js`. It prints coverage; anything untranslated simply falls back to English (never shows wrong text). Aim for `0 untranslated`.
-> Easiest: just tell the chat "I changed X in English, re-translate it" — it handles the key + corpus + all 8 languages + rebuild.
+The normal flow to change/add a string:
+1. Edit the English in the room HTML.
+2. `python3 tools/i18n_extract.py` — keys any new/changed elements and rebuilds `docs/js/i18n/_corpus.json` from the HTML (the source of truth). Re-runnable; a second run is a no-op.
+3. Add the matching English→translation entry in each `tools/translations/<lang>.json` (8: fr, es, de, pt, ko, zh, ja, hi). UI/JS-built labels go in the `"ui"` section instead (keyed by name, not English).
+4. `python3 tools/build_lang.py` — compiles them into `docs/js/i18n/*.js`. It prints coverage; anything untranslated simply falls back to English (never shows wrong text). Aim for `0 untranslated`.
+> Easiest: just tell the chat "I changed X in English, re-translate it" — it handles the extract + all 8 languages + rebuild.
 
 ### 5. Change a door code or WiFi password
 These are **base64-encoded**, not plain text, so they don't leak to Google/GitHub search.
@@ -80,12 +82,13 @@ Tip: add `?theme=dark` or `?theme=light` to any URL to force a theme for screens
 
 ## Publish
 Commit and push to `main`; GitHub Pages redeploys in ~1–2 minutes.
-**Always bump `VERSION` in `docs/sw.js`** (e.g. `nsto-v5` → `nsto-v6`) or returning guests keep seeing the old cached version. (Live is now `nsto-v6`.)
+**Always bump `VERSION` in `docs/sw.js`** (e.g. `nsto-v6` → `nsto-v7`) or returning guests keep seeing the old cached version. (Live is now `nsto-v7`.)
 
 ---
 
 ## Next up (open tasks)
-- **Fix `tools/i18n_extract.py`** (lower priority) — it's lossy (see step 4). Until fixed, manage `data-i18n` keys manually.
+- ~~Fix `tools/i18n_extract.py`~~ — **done**. Safe to run; see step 4.
+- **In-guide search doesn't index `.rule` detail text** (house rules, checkout checklist) — `buildGuideIndex()` in `js/guide.js` grabs the icon span instead of the detail span. Titles still match; detail-only words don't. Low priority, flagged for a future session.
 - ~~Around Us walk times~~ — **done** (reconciled vs Google Maps from 383 Concord Ave).
 - ~~Per-language search synonyms~~ — **done**. `SEARCH_SYN` in `js/guide.js` now has all 9 languages; matching is accent-insensitive (`fold()`), short Latin words match whole-word only. To add words later, just edit that language's arrays (keep proper nouns — Kumbah/Oliver/Ossington/TTC/Green P/Roku — in every language's groups) and bump `sw.js`.
 

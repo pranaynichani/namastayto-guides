@@ -314,7 +314,6 @@
   "Can I use the kitchen?": "キッチンは使えますか？",
   "Yes! The ground-floor kitchen is shared by all guests. Keep your food in the 2nd-floor fridge, and always run the vent fan when cooking.": "はい！1階のキッチンは全ゲスト共用です。食品は2階の冷蔵庫に入れ、調理の際は必ず換気扇をつけてください。",
   "Can I use the full kitchen?": "キッチン全体を使えますか？",
-  "Yes — you have your own kitchenette, plus the full shared kitchen upstairs. Keep your food in your basement fridge, and always run the vent fan when cooking.": "はい — 専用のミニキッチンに加え、上階に共用のフルキッチンがあります。食品は地下の冷蔵庫に入れ、調理の際は必ず換気扇をつけてください。",
   "Is laundry available?": "洗濯はできますか？",
   "Yes, with a minimum 5-night stay — first 3 loads a week free, then $2.50 per load for washer and dryer. Detergent and softener provided; let us know when you'd like to run a load.": "はい、5泊以上のご滞在で可能です — 週3回まで無料、以降は洗濯機・乾燥機1回$2.50です。洗剤と柔軟剤はご用意しています。洗濯されたいときはお知らせください。",
   "Yes! First 3 loads a week free, then $2.50 per load for washer and dryer. Detergent, softener and dryer sheets provided — and no one else needs the laundry room while you're here.": "はい！週3回まで無料、以降は洗濯機・乾燥機1回$2.50です。洗剤、柔軟剤、乾燥機シートをご用意しています — ご滞在中、ランドリールームを使うのはあなただけです。",
@@ -514,7 +513,9 @@
   "⚾ Toronto Blue Jays": "⚾ トロント・ブルージェイズ",
   "Don't have a car? <!-- AFF-PLACEHOLDER: discovercars --><a href=\"https://www.discovercars.com\" target=\"_blank\" rel=\"noopener\">Rent one for the day</a> — compares all the major rental brands at once.": "車をお持ちでないですか?<!-- AFF-PLACEHOLDER: discovercars --><a href=\"https://www.discovercars.com\" target=\"_blank\" rel=\"noopener\">1日レンタルしましょう</a> — 主要レンタカー会社を一括比較できます。",
   "🚗 Rent a car": "🚗 レンタカーを借りる",
-  "Planning a Niagara or day-trip drive? <!-- AFF-PLACEHOLDER: discovercars --><a href=\"https://www.discovercars.com\" target=\"_blank\" rel=\"noopener\">Discover Cars</a> compares all the major rental brands in one search.": "ナイアガラや日帰りドライブを計画中ですか?<!-- AFF-PLACEHOLDER: discovercars --><a href=\"https://www.discovercars.com\" target=\"_blank\" rel=\"noopener\">Discover Cars</a>なら主要レンタカー会社を一度に比較できます。"
+  "Planning a Niagara or day-trip drive? <!-- AFF-PLACEHOLDER: discovercars --><a href=\"https://www.discovercars.com\" target=\"_blank\" rel=\"noopener\">Discover Cars</a> compares all the major rental brands in one search.": "ナイアガラや日帰りドライブを計画中ですか?<!-- AFF-PLACEHOLDER: discovercars --><a href=\"https://www.discovercars.com\" target=\"_blank\" rel=\"noopener\">Discover Cars</a>なら主要レンタカー会社を一度に比較できます。",
+  "Yes! The full shared kitchen is upstairs — keep your food in your basement fridge, and always run the vent fan when cooking (it's a gas stove). Your suite has its own plates, bowls, mugs, glasses and cutlery — please use those where you can, and if you do borrow anything from upstairs, return it upstairs. And most importantly, please clean up after yourself 💛": "はい!共用キッチンは上の階にあります — 食材は地下の冷蔵庫に保管し、調理の際は必ず換気扇を回してください(ガスコンロです)。お部屋には専用のお皿、ボウル、マグカップ、グラス、カトラリーがありますので、できるだけそちらをご利用ください。上の階から何かを借りた場合は、必ず上の階に戻してください。そして何より、使った後は片付けをお願いします 💛",
+  "Thinking of renting a car for day trips — Niagara, wine country? <!-- AFF-PLACEHOLDER: discovercars --><a href=\"https://www.discovercars.com\" target=\"_blank\" rel=\"noopener\">Discover Cars</a> compares all the major rental brands in one search — and the parking info above covers rentals too.": "日帰り旅行 — ナイアガラやワインカントリー — のためにレンタカーをお考えですか?<!-- AFF-PLACEHOLDER: discovercars --><a href=\"https://www.discovercars.com\" target=\"_blank\" rel=\"noopener\">Discover Cars</a>なら主要レンタカー会社を一度に比較できます — 上記の駐車情報はレンタカーにも当てはまります。"
  },
  "places": {
   "Cafe Paradise": {

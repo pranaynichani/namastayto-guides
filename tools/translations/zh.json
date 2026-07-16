@@ -314,7 +314,6 @@
   "Can I use the kitchen?": "我可以使用厨房吗？",
   "Yes! The ground-floor kitchen is shared by all guests. Keep your food in the 2nd-floor fridge, and always run the vent fan when cooking.": "可以！一楼厨房由所有客人共用。请把食物放在二楼冰箱，做饭时务必打开抽油烟机。",
   "Can I use the full kitchen?": "我可以使用整个厨房吗？",
-  "Yes — you have your own kitchenette, plus the full shared kitchen upstairs. Keep your food in your basement fridge, and always run the vent fan when cooking.": "可以 — 你有自己的小厨房，楼上还有完整的共用厨房。请把食物放在地下室的冰箱，做饭时务必打开抽油烟机。",
   "Is laundry available?": "可以洗衣服吗？",
   "Yes, with a minimum 5-night stay — first 3 loads a week free, then $2.50 per load for washer and dryer. Detergent and softener provided; let us know when you'd like to run a load.": "可以，需住满5晚 — 每周前3次免费，之后洗衣机和烘干机每次 $2.50。提供洗涤剂和柔顺剂；想洗衣时请告知我们。",
   "Yes! First 3 loads a week free, then $2.50 per load for washer and dryer. Detergent, softener and dryer sheets provided — and no one else needs the laundry room while you're here.": "可以！每周前3次免费，之后洗衣机和烘干机每次 $2.50。提供洗涤剂、柔顺剂和烘干片 — 你入住期间没有其他人需要使用洗衣间。",
@@ -514,7 +513,9 @@
   "⚾ Toronto Blue Jays": "⚾ 多伦多蓝鸟队",
   "Don't have a car? <!-- AFF-PLACEHOLDER: discovercars --><a href=\"https://www.discovercars.com\" target=\"_blank\" rel=\"noopener\">Rent one for the day</a> — compares all the major rental brands at once.": "没有车吗?<!-- AFF-PLACEHOLDER: discovercars --><a href=\"https://www.discovercars.com\" target=\"_blank\" rel=\"noopener\">租一辆用一天</a> — 一次比较所有主要租车品牌。",
   "🚗 Rent a car": "🚗 租一辆车",
-  "Planning a Niagara or day-trip drive? <!-- AFF-PLACEHOLDER: discovercars --><a href=\"https://www.discovercars.com\" target=\"_blank\" rel=\"noopener\">Discover Cars</a> compares all the major rental brands in one search.": "计划去尼亚加拉或来一场一日游吗?<!-- AFF-PLACEHOLDER: discovercars --><a href=\"https://www.discovercars.com\" target=\"_blank\" rel=\"noopener\">Discover Cars</a>可以一次性比较所有主要租车品牌。"
+  "Planning a Niagara or day-trip drive? <!-- AFF-PLACEHOLDER: discovercars --><a href=\"https://www.discovercars.com\" target=\"_blank\" rel=\"noopener\">Discover Cars</a> compares all the major rental brands in one search.": "计划去尼亚加拉或来一场一日游吗?<!-- AFF-PLACEHOLDER: discovercars --><a href=\"https://www.discovercars.com\" target=\"_blank\" rel=\"noopener\">Discover Cars</a>可以一次性比较所有主要租车品牌。",
+  "Yes! The full shared kitchen is upstairs — keep your food in your basement fridge, and always run the vent fan when cooking (it's a gas stove). Your suite has its own plates, bowls, mugs, glasses and cutlery — please use those where you can, and if you do borrow anything from upstairs, return it upstairs. And most importantly, please clean up after yourself 💛": "可以!共用厨房在楼上——请把食物放在地下室的冰箱里,做饭时一定要打开抽油烟机(是燃气灶)。您的套房配有专属的盘子、碗、马克杯、玻璃杯和餐具——请尽量使用这些,如果从楼上借用了什么,请归还到楼上。最重要的是,使用后请清理干净 💛",
+  "Thinking of renting a car for day trips — Niagara, wine country? <!-- AFF-PLACEHOLDER: discovercars --><a href=\"https://www.discovercars.com\" target=\"_blank\" rel=\"noopener\">Discover Cars</a> compares all the major rental brands in one search — and the parking info above covers rentals too.": "计划租车去日游吗——尼亚加拉、葡萄酒产区?<!-- AFF-PLACEHOLDER: discovercars --><a href=\"https://www.discovercars.com\" target=\"_blank\" rel=\"noopener\">Discover Cars</a>可以一次性比较所有主要租车品牌——上面的停车信息同样适用于租车。"
  },
  "places": {
   "Cafe Paradise": {

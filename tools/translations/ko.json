@@ -314,7 +314,6 @@
   "Can I use the kitchen?": "주방을 사용할 수 있나요?",
   "Yes! The ground-floor kitchen is shared by all guests. Keep your food in the 2nd-floor fridge, and always run the vent fan when cooking.": "네! 1층 주방은 모든 손님이 함께 사용합니다. 음식은 2층 냉장고에 보관하시고, 요리할 때는 항상 환풍기를 켜 주세요.",
   "Can I use the full kitchen?": "전체 주방을 사용할 수 있나요?",
-  "Yes — you have your own kitchenette, plus the full shared kitchen upstairs. Keep your food in your basement fridge, and always run the vent fan when cooking.": "네 — 전용 간이 주방이 있고, 위층에 전체 공용 주방도 있습니다. 음식은 지하 냉장고에 보관하시고, 요리할 때는 항상 환풍기를 켜 주세요.",
   "Is laundry available?": "세탁이 가능한가요?",
   "Yes, with a minimum 5-night stay — first 3 loads a week free, then $2.50 per load for washer and dryer. Detergent and softener provided; let us know when you'd like to run a load.": "네, 최소 5박 숙박 시 가능합니다 — 주당 3회까지 무료, 이후 세탁기와 건조기 회당 $2.50입니다. 세제와 섬유유연제가 제공되니 세탁하고 싶을 때 말씀해 주세요.",
   "Yes! First 3 loads a week free, then $2.50 per load for washer and dryer. Detergent, softener and dryer sheets provided — and no one else needs the laundry room while you're here.": "네! 주당 3회까지 무료, 이후 세탁기와 건조기 회당 $2.50입니다. 세제, 섬유유연제, 건조기 시트가 제공되며, 숙박 중에는 다른 사람이 세탁실을 쓸 일이 없습니다.",
@@ -514,7 +513,9 @@
   "⚾ Toronto Blue Jays": "⚾ 토론토 블루제이스",
   "Don't have a car? <!-- AFF-PLACEHOLDER: discovercars --><a href=\"https://www.discovercars.com\" target=\"_blank\" rel=\"noopener\">Rent one for the day</a> — compares all the major rental brands at once.": "차가 없으신가요? <!-- AFF-PLACEHOLDER: discovercars --><a href=\"https://www.discovercars.com\" target=\"_blank\" rel=\"noopener\">하루 동안 렌트하세요</a> — 주요 렌터카 브랜드를 한 번에 비교합니다.",
   "🚗 Rent a car": "🚗 차량 렌트하기",
-  "Planning a Niagara or day-trip drive? <!-- AFF-PLACEHOLDER: discovercars --><a href=\"https://www.discovercars.com\" target=\"_blank\" rel=\"noopener\">Discover Cars</a> compares all the major rental brands in one search.": "나이아가라나 당일치기 드라이브를 계획 중이신가요? <!-- AFF-PLACEHOLDER: discovercars --><a href=\"https://www.discovercars.com\" target=\"_blank\" rel=\"noopener\">Discover Cars</a>에서 주요 렌터카 브랜드를 한 번에 비교해 보세요."
+  "Planning a Niagara or day-trip drive? <!-- AFF-PLACEHOLDER: discovercars --><a href=\"https://www.discovercars.com\" target=\"_blank\" rel=\"noopener\">Discover Cars</a> compares all the major rental brands in one search.": "나이아가라나 당일치기 드라이브를 계획 중이신가요? <!-- AFF-PLACEHOLDER: discovercars --><a href=\"https://www.discovercars.com\" target=\"_blank\" rel=\"noopener\">Discover Cars</a>에서 주요 렌터카 브랜드를 한 번에 비교해 보세요.",
+  "Yes! The full shared kitchen is upstairs — keep your food in your basement fridge, and always run the vent fan when cooking (it's a gas stove). Your suite has its own plates, bowls, mugs, glasses and cutlery — please use those where you can, and if you do borrow anything from upstairs, return it upstairs. And most importantly, please clean up after yourself 💛": "네! 공용 주방은 위층에 있어요 — 음식은 지하 냉장고에 보관하시고, 요리할 때는 항상 환풍기를 켜주세요 (가스레인지입니다). 스위트룸에는 전용 접시, 그릇, 머그컵, 유리컵, 식기가 있으니 가능하면 그것들을 사용해 주세요. 위층에서 뭔가 빌리셨다면 다시 위층에 갖다 놓아주세요. 그리고 무엇보다, 사용 후에는 꼭 정리해 주세요 💛",
+  "Thinking of renting a car for day trips — Niagara, wine country? <!-- AFF-PLACEHOLDER: discovercars --><a href=\"https://www.discovercars.com\" target=\"_blank\" rel=\"noopener\">Discover Cars</a> compares all the major rental brands in one search — and the parking info above covers rentals too.": "당일치기 여행을 위해 렌터카를 고려 중이신가요 — 나이아가라, 와인 컨트리? <!-- AFF-PLACEHOLDER: discovercars --><a href=\"https://www.discovercars.com\" target=\"_blank\" rel=\"noopener\">Discover Cars</a>에서 주요 렌터카 브랜드를 한 번에 비교해 보세요 — 위의 주차 정보는 렌터카에도 동일하게 적용됩니다."
  },
  "places": {
   "Cafe Paradise": {

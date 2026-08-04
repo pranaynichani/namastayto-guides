@@ -24,7 +24,8 @@
   "gsearchEmpty": "Sin resultados — prueba otra palabra",
   "favLine": "⭐ Nuestros {n} favoritos · los más cercanos primero",
   "showAll": "Ver los {n} lugares ▾",
-  "showFavs": "Ver solo nuestros favoritos ▴"
+  "showFavs": "Ver solo nuestros favoritos ▴",
+  "hintRate": "⭐ ¿Vas a dejar una reseña? Mira cómo funcionan las estrellas de Airbnb."
  },
  "x": {
   "Address": "Dirección",
@@ -139,8 +140,6 @@
   "<b>Shoes off, slippers on 🥿</b><small>There's a shared closet on your right for shoes and jackets. Slippers are waiting in your room.</small>": "<b>Zapatos fuera, pantuflas puestas 🥿</b><small>Hay un clóset compartido a tu derecha para zapatos y abrigos. Las pantuflas te esperan en tu habitación.</small>",
   "Enter code, press ✓": "Ingresa el código, presiona ✓",
   "Shoe &amp; coat closet on your right": "Clóset de zapatos y abrigos a tu derecha",
-  "<strong>Arriving early?</strong> If the room is ready sooner we're happy to accommodate, and we can always arrange a luggage drop-off — just message us in advance.": "<strong>¿Llegas temprano?</strong> Si la habitación está lista antes, con gusto te recibimos, y siempre podemos guardar tu equipaje — solo escríbenos con anticipación.",
-  "<strong>Arriving early?</strong> If the suite is ready sooner we're happy to accommodate, and we can always arrange a luggage drop-off — just message us in advance.": "<strong>¿Llegas temprano?</strong> Si la suite está lista antes, con gusto te recibimos, y siempre podemos guardar tu equipaje — solo escríbenos con anticipación.",
   "Your suite has its <strong>own private entrance</strong> at the back of the house. Follow the string lights — they lead you straight there. ✨": "Tu suite tiene su <strong>propia entrada privada</strong> en la parte trasera de la casa. Sigue las luces de guirnalda — te llevan directo. ✨",
   "<b>Follow the string lights beside the house</b><small>They run between our house and the neighbour's, all the way to the back.</small>": "<b>Sigue las luces junto a la casa</b><small>Corren entre nuestra casa y la del vecino, hasta la parte de atrás.</small>",
   "<b>Go through the gate on your left</b><small>Just before the backyard seating area — right where the string lights end.</small>": "<b>Pasa por la puerta de reja a tu izquierda</b><small>Justo antes de la zona de asientos del patio — donde terminan las luces.</small>",
@@ -543,7 +542,20 @@
   "Airalo": "Airalo",
   "Welcome Pickups": "Welcome Pickups",
   "Discover Cars": "Discover Cars",
-  "<strong>Skip the planning:</strong> we've curated the best Toronto tours and experiences on Viator. <a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">Browse our Toronto picks →</a>": "<strong>Olvídate de planear:</strong> seleccionamos los mejores tours y experiencias de Toronto en Viator. <a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">Mira nuestra selección de Toronto →</a>"
+  "<strong>Skip the planning:</strong> we've curated the best Toronto tours and experiences on Viator. <a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">Browse our Toronto picks →</a>": "<strong>Olvídate de planear:</strong> seleccionamos los mejores tours y experiencias de Toronto en Viator. <a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">Mira nuestra selección de Toronto →</a>",
+  "📱 No Canadian SIM? Tap for our data tip": "📱 ¿Sin SIM canadiense? Toca para nuestro consejo de datos",
+  "<strong>Arriving early?</strong> If the room is ready sooner we're happy to accommodate, and we can always arrange a luggage drop-off — just message us in advance. Rather explore first? <a href=\"https://radicalstorage.tpx.lu/o0KPYVe5\" target=\"_blank\" rel=\"noopener\">Radical Storage</a> has bag drop-offs all over downtown, so you can head straight out.": "<strong>¿Llegas temprano?</strong> Si la habitación está lista antes, con gusto te recibimos — y siempre podemos coordinar dejar el equipaje, solo avísanos con antelación. ¿Prefieres explorar primero? <a href=\"https://radicalstorage.tpx.lu/o0KPYVe5\" target=\"_blank\" rel=\"noopener\">Radical Storage</a> tiene puntos para dejar maletas por todo el centro, así sales a pasear de una vez.",
+  "<strong>Arriving early?</strong> If the suite is ready sooner we're happy to accommodate, and we can always arrange a luggage drop-off — just message us in advance. Rather explore first? <a href=\"https://radicalstorage.tpx.lu/o0KPYVe5\" target=\"_blank\" rel=\"noopener\">Radical Storage</a> has bag drop-offs all over downtown, so you can head straight out.": "<strong>¿Llegas temprano?</strong> Si la suite está lista antes, con gusto te recibimos — y siempre podemos coordinar dejar el equipaje, solo avísanos con antelación. ¿Prefieres explorar primero? <a href=\"https://radicalstorage.tpx.lu/o0KPYVe5\" target=\"_blank\" rel=\"noopener\">Radical Storage</a> tiene puntos para dejar maletas por todo el centro, así sales a pasear de una vez.",
+  "Don't go to the front door! Follow the arrow — your entrance is along the <strong>right side</strong> of the house, at the back": "¡No vayas a la puerta principal! Sigue la flecha — tu entrada está por el <strong>lado derecho</strong> de la casa, en la parte trasera",
+  "⭐ Are we earning a 5-star review?": "⭐ ¿Nos estamos ganando 5 estrellas?",
+  "When rating your stay, please keep in mind that our rating system differs from classic ratings. If our average rating falls below 4.3 stars we can be shut down. To help with any confusion, we've prepared the following guide:": "Al calificar tu estadía, ten en cuenta que nuestro sistema de calificación difiere de las calificaciones clásicas. Si nuestro promedio baja de 4.3 estrellas, pueden cerrar nuestro anuncio. Para evitar confusiones, preparamos esta pequeña guía:",
+  "Perfection doesn't exist, but we were very happy.": "La perfección no existe, pero quedamos muy contentos.",
+  "There were several issues. Needs improvement.": "Hubo varios problemas. Necesita mejorar.",
+  "There were major issues with my stay.": "Hubo problemas graves durante mi estadía.",
+  "Terrible. Shut down the listing immediately.": "Terrible. Cierren el anuncio de inmediato.",
+  "I'd rather sleep in my car!": "¡Preferiría dormir en mi auto!",
+  "We hope you'll be back to visit again soon!": "¡Esperamos que vuelvas a visitarnos pronto!",
+  "How does Airbnb's rating system work?": "¿Cómo funciona el sistema de calificación de Airbnb?"
  },
  "places": {
   "Cafe Paradise": {

@@ -298,6 +298,7 @@ details.tsub summary::after{order:3; margin-left:0}
 .mini-table{width:100%; border-collapse:collapse; font-size:15px; margin:10px 0}
 .mini-table td,.mini-table th{padding:8px 10px; border-bottom:1px solid var(--line); text-align:left}
 .mini-table th{font-size:12.5px; text-transform:uppercase; letter-spacing:.1em; color:var(--faint)}
+.rate-table .stars{white-space:nowrap; color:var(--gold-ink); letter-spacing:1.5px; font-size:14px}
 
 /* ---------- footer ---------- */
 .skyline{margin-top:44px; color:var(--line2)}

@@ -24,7 +24,8 @@
   "gsearchEmpty": "कोई परिणाम नहीं — कोई और शब्द आज़माएँ",
   "favLine": "⭐ हमारी {n} पसंदीदा जगहें · सबसे पास वाली पहले",
   "showAll": "सभी {n} जगहें देखें ▾",
-  "showFavs": "सिर्फ़ हमारी पसंदीदा देखें ▴"
+  "showFavs": "सिर्फ़ हमारी पसंदीदा देखें ▴",
+  "hintRate": "⭐ रिव्यू देने वाले हैं? जानें Airbnb के स्टार कैसे काम करते हैं।"
  },
  "x": {
   "Address": "पता",
@@ -139,8 +140,6 @@
   "<b>Shoes off, slippers on 🥿</b><small>There's a shared closet on your right for shoes and jackets. Slippers are waiting in your room.</small>": "<b>जूते उतारें, चप्पल पहनें 🥿</b><small>जूतों और जैकेट के लिए आपकी दाईं ओर एक साझा अलमारी है। चप्पल आपके कमरे में रखी हैं।</small>",
   "Enter code, press ✓": "कोड डालें, ✓ दबाएँ",
   "Shoe &amp; coat closet on your right": "आपकी दाईं ओर जूते व कोट की अलमारी",
-  "<strong>Arriving early?</strong> If the room is ready sooner we're happy to accommodate, and we can always arrange a luggage drop-off — just message us in advance.": "<strong>जल्दी आ रहे हैं?</strong> अगर कमरा पहले तैयार हो जाए तो हम ख़ुशी से आपको ठहरा देंगे, और सामान रखवाने की व्यवस्था तो हमेशा हो सकती है — बस पहले से संदेश भेज दें।",
-  "<strong>Arriving early?</strong> If the suite is ready sooner we're happy to accommodate, and we can always arrange a luggage drop-off — just message us in advance.": "<strong>जल्दी आ रहे हैं?</strong> अगर सुइट पहले तैयार हो जाए तो हम ख़ुशी से आपको ठहरा देंगे, और सामान रखवाने की व्यवस्था तो हमेशा हो सकती है — बस पहले से संदेश भेज दें।",
   "Your suite has its <strong>own private entrance</strong> at the back of the house. Follow the string lights — they lead you straight there. ✨": "आपके सुइट का घर के पीछे <strong>अपना निजी प्रवेश द्वार</strong> है। स्ट्रिंग लाइट्स के पीछे चलें — वे आपको सीधे वहाँ ले जाएँगी। ✨",
   "<b>Follow the string lights beside the house</b><small>They run between our house and the neighbour's, all the way to the back.</small>": "<b>घर के बगल की स्ट्रिंग लाइट्स के पीछे चलें</b><small>ये हमारे और पड़ोसी के घर के बीच से होती हुई बिलकुल पीछे तक जाती हैं।</small>",
   "<b>Go through the gate on your left</b><small>Just before the backyard seating area — right where the string lights end.</small>": "<b>अपनी बाईं ओर के गेट से जाएँ</b><small>पिछवाड़े की बैठक जगह से ठीक पहले — जहाँ स्ट्रिंग लाइट्स ख़त्म होती हैं।</small>",
@@ -543,7 +542,20 @@
   "Airalo": "Airalo",
   "Welcome Pickups": "Welcome Pickups",
   "Discover Cars": "Discover Cars",
-  "<strong>Skip the planning:</strong> we've curated the best Toronto tours and experiences on Viator. <a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">Browse our Toronto picks →</a>": "<strong>प्लानिंग छोड़िए:</strong> हमने Viator पर टोरंटो के बेहतरीन टूर और अनुभव चुन लिए हैं। <a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">हमारी टोरंटो सूची देखें →</a>"
+  "<strong>Skip the planning:</strong> we've curated the best Toronto tours and experiences on Viator. <a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">Browse our Toronto picks →</a>": "<strong>प्लानिंग छोड़िए:</strong> हमने Viator पर टोरंटो के बेहतरीन टूर और अनुभव चुन लिए हैं। <a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">हमारी टोरंटो सूची देखें →</a>",
+  "📱 No Canadian SIM? Tap for our data tip": "📱 कनाडाई SIM नहीं है? हमारी डेटा टिप के लिए टैप करें",
+  "<strong>Arriving early?</strong> If the room is ready sooner we're happy to accommodate, and we can always arrange a luggage drop-off — just message us in advance. Rather explore first? <a href=\"https://radicalstorage.tpx.lu/o0KPYVe5\" target=\"_blank\" rel=\"noopener\">Radical Storage</a> has bag drop-offs all over downtown, so you can head straight out.": "<strong>जल्दी पहुंच रहे हैं?</strong> अगर कमरा पहले तैयार हो जाए तो हमें खुशी होगी, और सामान रखने का इंतज़ाम भी हमेशा हो सकता है — बस पहले से मैसेज कर दें। पहले घूमना चाहते हैं? <a href=\"https://radicalstorage.tpx.lu/o0KPYVe5\" target=\"_blank\" rel=\"noopener\">Radical Storage</a> के डाउनटाउन में जगह-जगह बैग रखने के पॉइंट हैं, तो आप सीधे निकल सकते हैं।",
+  "<strong>Arriving early?</strong> If the suite is ready sooner we're happy to accommodate, and we can always arrange a luggage drop-off — just message us in advance. Rather explore first? <a href=\"https://radicalstorage.tpx.lu/o0KPYVe5\" target=\"_blank\" rel=\"noopener\">Radical Storage</a> has bag drop-offs all over downtown, so you can head straight out.": "<strong>जल्दी पहुंच रहे हैं?</strong> अगर सुइट पहले तैयार हो जाए तो हमें खुशी होगी, और सामान रखने का इंतज़ाम भी हमेशा हो सकता है — बस पहले से मैसेज कर दें। पहले घूमना चाहते हैं? <a href=\"https://radicalstorage.tpx.lu/o0KPYVe5\" target=\"_blank\" rel=\"noopener\">Radical Storage</a> के डाउनटाउन में जगह-जगह बैग रखने के पॉइंट हैं, तो आप सीधे निकल सकते हैं।",
+  "Don't go to the front door! Follow the arrow — your entrance is along the <strong>right side</strong> of the house, at the back": "सामने के दरवाज़े पर न जाएँ! तीर के निशान का पालन करें — आपका प्रवेश घर की <strong>दाईं ओर</strong> से होकर पीछे है",
+  "⭐ Are we earning a 5-star review?": "⭐ क्या हम 5-स्टार रिव्यू के हक़दार हैं?",
+  "When rating your stay, please keep in mind that our rating system differs from classic ratings. If our average rating falls below 4.3 stars we can be shut down. To help with any confusion, we've prepared the following guide:": "अपने प्रवास को रेट करते समय ध्यान रखें कि हमारा रेटिंग सिस्टम आम रेटिंग से अलग है। अगर हमारी औसत रेटिंग 4.3 स्टार से नीचे जाती है तो हमारी लिस्टिंग बंद हो सकती है। किसी भी उलझन से बचने के लिए हमने यह छोटी गाइड बनाई है:",
+  "Perfection doesn't exist, but we were very happy.": "परफ़ेक्शन मौजूद नहीं, फिर भी हम बहुत खुश थे।",
+  "There were several issues. Needs improvement.": "कई दिक्कतें थीं। सुधार की ज़रूरत है।",
+  "There were major issues with my stay.": "मेरे प्रवास में बड़ी दिक्कतें थीं।",
+  "Terrible. Shut down the listing immediately.": "बहुत बुरा। लिस्टिंग तुरंत बंद करो।",
+  "I'd rather sleep in my car!": "इससे तो मैं अपनी कार में सो जाता!",
+  "We hope you'll be back to visit again soon!": "उम्मीद है आप जल्द फिर आएँगे!",
+  "How does Airbnb's rating system work?": "Airbnb का रेटिंग सिस्टम कैसे काम करता है?"
  },
  "places": {
   "Cafe Paradise": {

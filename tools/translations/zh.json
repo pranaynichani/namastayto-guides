@@ -24,7 +24,8 @@
   "gsearchEmpty": "没有匹配项 — 换个词试试",
   "favLine": "⭐ 我们最爱的{n}家 · 按距离排序",
   "showAll": "查看全部{n}个地点 ▾",
-  "showFavs": "只看我们的最爱 ▴"
+  "showFavs": "只看我们的最爱 ▴",
+  "hintRate": "⭐ 要写评价吗?了解爱彼迎星级评分的含义。"
  },
  "x": {
   "Address": "地址",
@@ -139,8 +140,6 @@
   "<b>Shoes off, slippers on 🥿</b><small>There's a shared closet on your right for shoes and jackets. Slippers are waiting in your room.</small>": "<b>脱鞋换拖鞋 🥿</b><small>右手边有共用衣橱可放鞋子和外套。房间里为你备好了拖鞋。</small>",
   "Enter code, press ✓": "输入密码，按 ✓",
   "Shoe &amp; coat closet on your right": "右手边的鞋子和外套衣橱",
-  "<strong>Arriving early?</strong> If the room is ready sooner we're happy to accommodate, and we can always arrange a luggage drop-off — just message us in advance.": "<strong>提前到达？</strong>如果房间提前准备好，我们很乐意让你入住，也随时可以帮你寄存行李 — 只需提前给我们留言。",
-  "<strong>Arriving early?</strong> If the suite is ready sooner we're happy to accommodate, and we can always arrange a luggage drop-off — just message us in advance.": "<strong>提前到达？</strong>如果套房提前准备好，我们很乐意让你入住，也随时可以帮你寄存行李 — 只需提前给我们留言。",
   "Your suite has its <strong>own private entrance</strong> at the back of the house. Follow the string lights — they lead you straight there. ✨": "你的套房在房子后侧有 <strong>专属私人入口</strong>。跟着串灯走 — 它们会直接把你引到那里。✨",
   "<b>Follow the string lights beside the house</b><small>They run between our house and the neighbour's, all the way to the back.</small>": "<b>沿着房子旁的串灯走</b><small>它们在我们家和邻居家之间一直延伸到后面。</small>",
   "<b>Go through the gate on your left</b><small>Just before the backyard seating area — right where the string lights end.</small>": "<b>穿过左手边的门</b><small>就在后院座位区之前，也就是串灯结束的地方。</small>",
@@ -543,7 +542,20 @@
   "Airalo": "Airalo",
   "Welcome Pickups": "Welcome Pickups",
   "Discover Cars": "Discover Cars",
-  "<strong>Skip the planning:</strong> we've curated the best Toronto tours and experiences on Viator. <a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">Browse our Toronto picks →</a>": "<strong>省去规划:</strong>我们在Viator上精选了多伦多最棒的游览和体验。<a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">浏览我们的多伦多精选 →</a>"
+  "<strong>Skip the planning:</strong> we've curated the best Toronto tours and experiences on Viator. <a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">Browse our Toronto picks →</a>": "<strong>省去规划:</strong>我们在Viator上精选了多伦多最棒的游览和体验。<a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">浏览我们的多伦多精选 →</a>",
+  "📱 No Canadian SIM? Tap for our data tip": "📱 没有加拿大SIM卡?点开看我们的流量小贴士",
+  "<strong>Arriving early?</strong> If the room is ready sooner we're happy to accommodate, and we can always arrange a luggage drop-off — just message us in advance. Rather explore first? <a href=\"https://radicalstorage.tpx.lu/o0KPYVe5\" target=\"_blank\" rel=\"noopener\">Radical Storage</a> has bag drop-offs all over downtown, so you can head straight out.": "<strong>提前到达?</strong>如果房间提前准备好,我们很乐意让您先入住,也随时可以安排寄存行李 — 提前给我们留言即可。想先去逛逛?<a href=\"https://radicalstorage.tpx.lu/o0KPYVe5\" target=\"_blank\" rel=\"noopener\">Radical Storage</a>在市中心各处都有行李寄存点,您可以直接出发。",
+  "<strong>Arriving early?</strong> If the suite is ready sooner we're happy to accommodate, and we can always arrange a luggage drop-off — just message us in advance. Rather explore first? <a href=\"https://radicalstorage.tpx.lu/o0KPYVe5\" target=\"_blank\" rel=\"noopener\">Radical Storage</a> has bag drop-offs all over downtown, so you can head straight out.": "<strong>提前到达?</strong>如果套房提前准备好,我们很乐意让您先入住,也随时可以安排寄存行李 — 提前给我们留言即可。想先去逛逛?<a href=\"https://radicalstorage.tpx.lu/o0KPYVe5\" target=\"_blank\" rel=\"noopener\">Radical Storage</a>在市中心各处都有行李寄存点,您可以直接出发。",
+  "Don't go to the front door! Follow the arrow — your entrance is along the <strong>right side</strong> of the house, at the back": "不要走前门!请沿箭头方向 — 您的入口在房子<strong>右侧</strong>,位于后方",
+  "⭐ Are we earning a 5-star review?": "⭐ 我们配得上5星好评吗?",
+  "When rating your stay, please keep in mind that our rating system differs from classic ratings. If our average rating falls below 4.3 stars we can be shut down. To help with any confusion, we've prepared the following guide:": "为您的住宿评分时,请记住我们的评分系统与传统评分不同。如果我们的平均评分低于4.3星,房源可能会被下架。为避免误解,我们准备了以下小指南:",
+  "Perfection doesn't exist, but we were very happy.": "完美并不存在,但我们住得非常开心。",
+  "There were several issues. Needs improvement.": "有好几个问题。需要改进。",
+  "There were major issues with my stay.": "住宿期间有重大问题。",
+  "Terrible. Shut down the listing immediately.": "糟透了。立即下架这个房源。",
+  "I'd rather sleep in my car!": "我宁愿睡在自己车里!",
+  "We hope you'll be back to visit again soon!": "期待您再次光临!",
+  "How does Airbnb's rating system work?": "爱彼迎的评分系统是如何运作的?"
  },
  "places": {
   "Cafe Paradise": {

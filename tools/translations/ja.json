@@ -24,7 +24,8 @@
   "gsearchEmpty": "該当なし — 別の言葉でお試しください",
   "favLine": "⭐ 私たちのお気に入り{n}軒 · 近い順",
   "showAll": "{n}軒すべて表示 ▾",
-  "showFavs": "お気に入りだけ表示 ▴"
+  "showFavs": "お気に入りだけ表示 ▴",
+  "hintRate": "⭐ レビューを書かれますか?Airbnbの星の仕組みをご覧ください。"
  },
  "x": {
   "Address": "住所",
@@ -139,8 +140,6 @@
   "<b>Shoes off, slippers on 🥿</b><small>There's a shared closet on your right for shoes and jackets. Slippers are waiting in your room.</small>": "<b>靴を脱いでスリッパへ 🥿</b><small>右手に靴と上着用の共用クローゼットがあります。スリッパはお部屋にご用意しています。</small>",
   "Enter code, press ✓": "暗証番号を入力し、✓を押す",
   "Shoe &amp; coat closet on your right": "右手に靴と上着のクローゼット",
-  "<strong>Arriving early?</strong> If the room is ready sooner we're happy to accommodate, and we can always arrange a luggage drop-off — just message us in advance.": "<strong>早めに到着されますか？</strong>お部屋が早く整えばよろこんでご案内しますし、荷物のお預かりもいつでも可能です — 事前にメッセージをください。",
-  "<strong>Arriving early?</strong> If the suite is ready sooner we're happy to accommodate, and we can always arrange a luggage drop-off — just message us in advance.": "<strong>早めに到着されますか？</strong>スイートが早く整えばよろこんでご案内しますし、荷物のお預かりもいつでも可能です — 事前にメッセージをください。",
   "Your suite has its <strong>own private entrance</strong> at the back of the house. Follow the string lights — they lead you straight there. ✨": "スイートには家の裏手に <strong>専用のプライベート入口</strong> があります。ストリングライトをたどれば、そのまま入口へ着きます。✨",
   "<b>Follow the string lights beside the house</b><small>They run between our house and the neighbour's, all the way to the back.</small>": "<b>家の脇のストリングライトをたどってください</b><small>わが家とお隣の間を通り、裏手までずっと続いています。</small>",
   "<b>Go through the gate on your left</b><small>Just before the backyard seating area — right where the string lights end.</small>": "<b>左手のゲートをくぐってください</b><small>裏庭の座席スペースのすぐ手前、ストリングライトが終わる場所です。</small>",
@@ -543,7 +542,20 @@
   "Airalo": "Airalo",
   "Welcome Pickups": "Welcome Pickups",
   "Discover Cars": "Discover Cars",
-  "<strong>Skip the planning:</strong> we've curated the best Toronto tours and experiences on Viator. <a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">Browse our Toronto picks →</a>": "<strong>プランはおまかせ:</strong>Viatorでトロントのベストなツアー&体験を厳選しました。<a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">トロントのおすすめを見る →</a>"
+  "<strong>Skip the planning:</strong> we've curated the best Toronto tours and experiences on Viator. <a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">Browse our Toronto picks →</a>": "<strong>プランはおまかせ:</strong>Viatorでトロントのベストなツアー&体験を厳選しました。<a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">トロントのおすすめを見る →</a>",
+  "📱 No Canadian SIM? Tap for our data tip": "📱 カナダのSIMをお持ちでない方へ — データ通信のコツ",
+  "<strong>Arriving early?</strong> If the room is ready sooner we're happy to accommodate, and we can always arrange a luggage drop-off — just message us in advance. Rather explore first? <a href=\"https://radicalstorage.tpx.lu/o0KPYVe5\" target=\"_blank\" rel=\"noopener\">Radical Storage</a> has bag drop-offs all over downtown, so you can head straight out.": "<strong>早めのご到着ですか?</strong>お部屋の準備が早く整えば喜んでご案内しますし、荷物のお預かりもいつでも調整できます — 事前にメッセージをください。先に街を楽しみたい方は?<a href=\"https://radicalstorage.tpx.lu/o0KPYVe5\" target=\"_blank\" rel=\"noopener\">Radical Storage</a>がダウンタウン各所で荷物を預かってくれるので、そのまま観光に出られます。",
+  "<strong>Arriving early?</strong> If the suite is ready sooner we're happy to accommodate, and we can always arrange a luggage drop-off — just message us in advance. Rather explore first? <a href=\"https://radicalstorage.tpx.lu/o0KPYVe5\" target=\"_blank\" rel=\"noopener\">Radical Storage</a> has bag drop-offs all over downtown, so you can head straight out.": "<strong>早めのご到着ですか?</strong>スイートの準備が早く整えば喜んでご案内しますし、荷物のお預かりもいつでも調整できます — 事前にメッセージをください。先に街を楽しみたい方は?<a href=\"https://radicalstorage.tpx.lu/o0KPYVe5\" target=\"_blank\" rel=\"noopener\">Radical Storage</a>がダウンタウン各所で荷物を預かってくれるので、そのまま観光に出られます。",
+  "Don't go to the front door! Follow the arrow — your entrance is along the <strong>right side</strong> of the house, at the back": "正面玄関ではありません!矢印に沿って — 入口は家の<strong>右側</strong>を通った奥にあります",
+  "⭐ Are we earning a 5-star review?": "⭐ 私たちは星5つに値しますか?",
+  "When rating your stay, please keep in mind that our rating system differs from classic ratings. If our average rating falls below 4.3 stars we can be shut down. To help with any confusion, we've prepared the following guide:": "ご滞在を評価される際は、私たちの評価システムが一般的な星評価とは異なることをご承知おきください。平均評価が4.3を下回ると、掲載が停止されることがあります。誤解のないよう、小さなガイドをご用意しました:",
+  "Perfection doesn't exist, but we were very happy.": "完璧は存在しない。でも私たちはとても満足だった。",
+  "There were several issues. Needs improvement.": "いくつか問題があった。改善が必要。",
+  "There were major issues with my stay.": "滞在中に大きな問題があった。",
+  "Terrible. Shut down the listing immediately.": "ひどかった。今すぐ掲載を停止すべき。",
+  "I'd rather sleep in my car!": "車で寝たほうがマシ!",
+  "We hope you'll be back to visit again soon!": "またのお越しをお待ちしています!",
+  "How does Airbnb's rating system work?": "Airbnbの評価システムはどんな仕組みですか?"
  },
  "places": {
   "Cafe Paradise": {

@@ -280,13 +280,26 @@ function paintHints(){
   var hints = [];
   if(tor.h >= 23 || tor.h < 8) hints.push({c:"info", i:"🤫", t:T("hintQuiet","It's {time} in Toronto — quiet hours (11 PM – 8 AM) are in effect. Thanks for keeping the volume cozy.").replace("{time}", tor.label)});
   if(day === 3 && hr >= 16) hints.push({c:"gold", i:"🗑️", t:T("hintBins","It's Wednesday — bins go to the curb this evening for Thursday morning pickup.")});
-  if(hr >= 8 && hr < 11) hints.push({c:"gold", i:"⏰", t:T("hintCheckout","Checking out today? Checkout is at 11:00 AM — message us on Airbnb if you need a hand.")});
+  if(hr >= 8 && hr < 11){
+    var ht = T("hintCheckout","Checking out today? Checkout is at 11:00 AM — message us on Airbnb if you need a hand.");
+    /* room guides only: opt-in link to the ratings explainer in the Checkout section */
+    if(document.getElementById("ratings")) ht += ' <a href="#ratings">' + T("hintRate","⭐ Leaving a review? See how Airbnb's stars work.") + "</a>";
+    hints.push({c:"gold", i:"⏰", t:ht});
+  }
   if(hints.length){
     var h = hints[0];
     hintStrip.innerHTML = '<div class="callout ' + h.c + '"><span class="ico">' + h.i + '</span><span>' + h.t + "</span></div>";
     hintStrip.classList.add("on");
   } else { hintStrip.classList.remove("on"); hintStrip.innerHTML = ""; }
 }
+
+/* any link to #ratings also pops the collapsed card open */
+document.addEventListener("click", function(e){
+  var a = e.target.closest && e.target.closest('a[href="#ratings"]');
+  if(!a) return;
+  var d = document.getElementById("ratings");
+  if(d) d.open = true;
+});
 
 /* ================= PWA install nudge ================= */
 var deferredPrompt = null;

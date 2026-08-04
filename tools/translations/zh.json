@@ -339,7 +339,6 @@
   "Prefer a map? <a href=\"https://maps.app.goo.gl/4qhESNe2efMqXMdH6\" target=\"_blank\" rel=\"noopener\">Open our full list of local spots in Google Maps</a> — every pin, ready for directions.": "更喜欢地图？<a href=\"https://maps.app.goo.gl/4qhESNe2efMqXMdH6\" target=\"_blank\" rel=\"noopener\">在 Google 地图中打开我们完整的本地去处清单</a> — 每个标记都可一键导航。",
   "<span class=\"orn\">✦</span> Things to do in Toronto": "<span class=\"orn\">✦</span> 多伦多有什么好玩的",
   "From the skyline to the islands — here's how to make the most of the city.": "从天际线到湖心岛 — 这里教你如何玩转这座城市。",
-  "<strong>Skip the planning:</strong> we've curated the best Toronto experiences on Viator — bus, walking, boat, food, bike, Segway and even helicopter tours, plus quick links to top attraction tickets. <a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">Browse our Toronto picks →</a>": "<strong>省去做攻略：</strong>我们在 Viator 上精选了多伦多最佳体验 — 巴士游、步行游、游船、美食游、骑行、平衡车，甚至直升机游，还有热门景点门票的快捷链接。<a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">浏览我们的精选 →</a>",
   "🏙️ Top attractions": "🏙️ 热门景点",
   "🗼 CN Tower": "🗼 CN 塔",
   "The icon — glass floor, EdgeWalk, and the best view in the city.": "地标 — 玻璃地板、EdgeWalk 边缘漫步，以及全城最佳景观。",
@@ -543,7 +542,8 @@
   "Radical Storage": "Radical Storage",
   "Airalo": "Airalo",
   "Welcome Pickups": "Welcome Pickups",
-  "Discover Cars": "Discover Cars"
+  "Discover Cars": "Discover Cars",
+  "<strong>Skip the planning:</strong> we've curated the best Toronto tours and experiences on Viator. <a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">Browse our Toronto picks →</a>": "<strong>省去规划:</strong>我们在Viator上精选了多伦多最棒的游览和体验。<a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">浏览我们的多伦多精选 →</a>"
  },
  "places": {
   "Cafe Paradise": {

@@ -339,7 +339,6 @@
   "Prefer a map? <a href=\"https://maps.app.goo.gl/4qhESNe2efMqXMdH6\" target=\"_blank\" rel=\"noopener\">Open our full list of local spots in Google Maps</a> — every pin, ready for directions.": "नक्शा पसंद है? <a href=\"https://maps.app.goo.gl/4qhESNe2efMqXMdH6\" target=\"_blank\" rel=\"noopener\">Google Maps में हमारी स्थानीय जगहों की पूरी सूची खोलें</a> — हर पिन, रास्ते के लिए तैयार।",
   "<span class=\"orn\">✦</span> Things to do in Toronto": "<span class=\"orn\">✦</span> टोरंटो में करने लायक चीज़ें",
   "From the skyline to the islands — here's how to make the most of the city.": "स्काईलाइन से लेकर द्वीपों तक — शहर का पूरा आनंद कैसे लें, यहाँ जानें।",
-  "<strong>Skip the planning:</strong> we've curated the best Toronto experiences on Viator — bus, walking, boat, food, bike, Segway and even helicopter tours, plus quick links to top attraction tickets. <a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">Browse our Toronto picks →</a>": "<strong>योजना बनाना छोड़ें:</strong> हमने Viator पर टोरंटो के सबसे अच्छे अनुभव चुने हैं — बस, पैदल, नाव, खाना, साइकिल, Segway और यहाँ तक कि हेलिकॉप्टर टूर, साथ ही टॉप आकर्षणों के टिकट के लिंक। <a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">हमारी पसंद देखें →</a>",
   "🏙️ Top attractions": "🏙️ प्रमुख आकर्षण",
   "🗼 CN Tower": "🗼 CN टॉवर",
   "The icon — glass floor, EdgeWalk, and the best view in the city.": "शहर की पहचान — काँच का फ़र्श, EdgeWalk, और शहर का सबसे बढ़िया नज़ारा।",
@@ -543,7 +542,8 @@
   "Radical Storage": "Radical Storage",
   "Airalo": "Airalo",
   "Welcome Pickups": "Welcome Pickups",
-  "Discover Cars": "Discover Cars"
+  "Discover Cars": "Discover Cars",
+  "<strong>Skip the planning:</strong> we've curated the best Toronto tours and experiences on Viator. <a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">Browse our Toronto picks →</a>": "<strong>प्लानिंग छोड़िए:</strong> हमने Viator पर टोरंटो के बेहतरीन टूर और अनुभव चुन लिए हैं। <a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">हमारी टोरंटो सूची देखें →</a>"
  },
  "places": {
   "Cafe Paradise": {

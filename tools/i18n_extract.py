@@ -13,7 +13,8 @@ import hashlib, json, os, re, sys
 
 ROOT = os.path.join(os.path.dirname(__file__), "..", "docs")
 PAGES = ["southroom/index.html", "eastroom/index.html",
-         "basementroom/index.html", "aroundus/index.html", "index.html"]
+         "basementroom/index.html", "aroundus/index.html",
+         "aroundus/partners.html", "index.html"]
 
 # leaf-ish elements whose innerHTML we translate wholesale
 TAGS = r"(?:h1|h2|h3|p|li|summary|figcaption|td|th|button|label|a|span|div|small|b|i|em)"

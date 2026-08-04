@@ -409,7 +409,10 @@ function fmt(m){
 /* ================= places explorer ================= */
 var placesRoot = document.getElementById("places");
 if(placesRoot && window.PLACES){
-  var state = {type:"all", q:"", late:false, openNow:false};
+  var state = {type:"all", q:"", late:false, openNow:false, showAll:false};
+  var FAV_COUNT = window.PLACES.filter(function(p){ return p.fav; }).length;
+  /* favourites-first: with no filters active, show only host favourites until "Show all" is tapped */
+  var filtersActive = function(){ return state.type!=="all" || state.q || state.late || state.openNow; };
   var chipsEl = document.getElementById("typeChips");
   var renderChips = function(){
     if(!chipsEl || !window.PLACE_TYPES) return;
@@ -469,7 +472,9 @@ if(placesRoot && window.PLACES){
       "</div>";
   };
   var render = function(){
+    var favMode = !filtersActive() && !state.showAll;
     var list = window.PLACES.filter(function(p){
+      if(favMode && !p.fav) return false;
       if(state.type!=="all" && p.type!==state.type) return false;
       if(state.late && !p.openLate) return false;
       if(state.q){
@@ -484,8 +489,22 @@ if(placesRoot && window.PLACES){
     });
     list.sort(function(a,b){ return (a.walkMin||99) - (b.walkMin||99); });
     var cl = document.getElementById("countLine");
-    if(cl) cl.textContent = list.length ? T("countLine","{n} places · sorted by walking distance").replace("{n}", list.length) : "";
+    if(cl) cl.textContent = favMode
+      ? T("favLine","⭐ Our {n} favourites · nearest first").replace("{n}", list.length)
+      : (list.length ? T("countLine","{n} places · sorted by walking distance").replace("{n}", list.length) : "");
     placesRoot.innerHTML = list.length ? list.map(card).join("") : '<div class="empty-msg">' + T("empty","Nothing matches those filters — try widening them a little.") + "</div>";
+    /* Show-all toggle: visible only when no filters are active (a filter/search always searches everything) */
+    var sb = document.getElementById("showAllBtn");
+    if(!sb){
+      sb = document.createElement("button");
+      sb.id = "showAllBtn"; sb.type = "button"; sb.className = "show-all-btn";
+      placesRoot.parentNode.insertBefore(sb, placesRoot.nextSibling);
+      sb.addEventListener("click", function(){ state.showAll = !state.showAll; render(); if(state.showAll===false) placesRoot.scrollIntoView({block:"start"}); });
+    }
+    sb.style.display = filtersActive() ? "none" : "";
+    sb.textContent = state.showAll
+      ? T("showFavs","Show just our favourites ▴")
+      : T("showAll","Show all {n} places ▾").replace("{n}", window.PLACES.length);
   };
   window.__renderPlaces = render;
   render();

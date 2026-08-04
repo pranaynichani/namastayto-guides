@@ -24,7 +24,7 @@ Plain HTML/CSS/JS, no build step. Same pattern as the portfolio & hospital sites
 - `js/places-data.js` — the 90+ neighbourhood places (name, type, hours, walk time, maps link…)
 - `js/i18n/<lang>.js` — compiled translations (do NOT hand-edit; see below)
 - `assets/img/{south,east,basement,shared,brand}/` — photos
-- `sw.js` — offline service worker (**bump `VERSION` on every change**, currently `nsto-v6`)
+- `sw.js` — offline service worker (**bump `VERSION` on every change**, currently `nsto-v15`)
 
 ### Interactive features built into the room guides (all in `guide.js` + `css/style.css`)
 - **In-guide search** 🔍 (title-bar button) — room guides only; indexes the page live (incl. the top essentials card: WiFi/address/check-in), expands synonyms (`SEARCH_SYN` — "trash"→garbage, "internet"→wifi…), jumps + flashes results. Injected by JS, no per-page HTML.
@@ -82,7 +82,7 @@ Tip: add `?theme=dark` or `?theme=light` to any URL to force a theme for screens
 
 ## Publish
 Commit and push to `main`; GitHub Pages redeploys in ~1–2 minutes.
-**Always bump `VERSION` in `docs/sw.js`** (e.g. `nsto-v6` → `nsto-v7`) or returning guests keep seeing the old cached version. (Live is now `nsto-v7`.)
+**Always bump `VERSION` in `docs/sw.js`** (e.g. `nsto-v15` → `nsto-v16`) or returning guests keep seeing the old cached version. (Live is now `nsto-v15`.)
 
 ---
 

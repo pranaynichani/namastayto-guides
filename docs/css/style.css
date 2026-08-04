@@ -262,6 +262,12 @@ html[data-theme="dark"] .btn{color:#2A1E05}
 .tog input{accent-color:var(--gold); width:16px; height:16px; margin:0}
 .tog.on{border-color:var(--gold); background:var(--gold-soft); color:var(--ink)}
 .count-line{font-size:14px; color:var(--faint); margin:0 0 14px}
+.show-all-btn{display:block; width:100%; margin-top:14px; font:inherit; font-size:15px; font-weight:650; color:var(--ink); background:var(--gold-soft); border:1.5px solid var(--gold); border-radius:14px; padding:13px 16px; cursor:pointer; -webkit-tap-highlight-color:transparent}
+.show-all-btn:active{transform:scale(.985)}
+details.tsub summary::before{content:attr(data-n); order:2; margin-left:auto; font-size:13px; font-weight:600; color:var(--faint)}
+details.tsub summary::after{order:3; margin-left:0}
+.tsub .body{padding:0 10px 12px}
+.tsub .body .swipe-row{margin:0}
 .places{display:grid; gap:12px}
 @media(min-width:640px){ .places{grid-template-columns:1fr 1fr} }
 .place{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:15px 16px; display:flex; flex-direction:column; gap:6px}
@@ -298,6 +304,10 @@ html[data-theme="dark"] .btn{color:#2A1E05}
 .skyline svg{display:block; width:100%; height:auto}
 footer.site{border-top:1px solid var(--line); padding:26px 18px calc(30px + env(safe-area-inset-bottom)); text-align:center; color:var(--muted); font-size:14.5px}
 footer.site .fm{font-family:'Fraunces',serif; font-style:italic; font-size:16px; color:var(--ink)}
+footer.site .aff-note{color:inherit; text-decoration:none; display:block; cursor:pointer}
+footer.site .aff-note p{margin:0}
+footer.site .aff-note p::after{content:" →"; color:var(--gold-ink); font-weight:700}
+footer.site .aff-note:hover p, footer.site .aff-note:active p{text-decoration:underline; text-underline-offset:3px}
 
 /* ---------- TTC transit badge ---------- */
 .ttc{display:inline-block; background:#DA251D; color:#fff; font-family:'DM Sans',system-ui,sans-serif;

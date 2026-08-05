@@ -555,7 +555,11 @@
   "How does Airbnb's rating system work?": "Como funciona o sistema de avaliação do Airbnb?",
   "Explore Guide": "Guia de Exploração",
   "🗺️ Explore Guide — our street, Toronto &amp; Niagara <span style=\"margin-left:auto;color:var(--gold-ink)\">→</span>": "🗺️ Guia de Exploração — nossa rua, Toronto e Niágara",
-  "<a href=\"./\">← Back to the Explore Guide</a>": "<a href=\"./\">← Voltar ao Guia de Exploração</a>"
+  "<a href=\"./\">← Back to the Explore Guide</a>": "<a href=\"./\">← Voltar ao Guia de Exploração</a>",
+  "🔑 Entry door code": "🔑 Código da porta de entrada",
+  "Where's my code?": "Onde está o meu código?",
+  "For security, entry door codes are never published in this guide. Your unique front-door code is sent to your Airbnb messages on the morning of check-in. Your room door code is just below in the Check-in section.": "Por segurança, os códigos da porta de entrada nunca são publicados neste guia. O seu código único da porta da frente é enviado para as suas mensagens do Airbnb na manhã do check-in. O código da porta do seu quarto está logo abaixo, na seção Check-in.",
+  "For security, entry door codes are never published in this guide. Your unique code is sent to your Airbnb messages on the morning of check-in.": "Por segurança, os códigos da porta de entrada nunca são publicados neste guia. O seu código único é enviado para as suas mensagens do Airbnb na manhã do check-in."
  },
  "places": {
   "Cafe Paradise": {

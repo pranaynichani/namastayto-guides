@@ -555,7 +555,11 @@
   "How does Airbnb's rating system work?": "에어비앤비 평점 시스템은 어떻게 작동하나요?",
   "Explore Guide": "탐험 가이드",
   "🗺️ Explore Guide — our street, Toronto &amp; Niagara <span style=\"margin-left:auto;color:var(--gold-ink)\">→</span>": "🗺️ 탐험 가이드 — 우리 동네, 토론토 & 나이아가라",
-  "<a href=\"./\">← Back to the Explore Guide</a>": "<a href=\"./\">← 탐험 가이드로 돌아가기</a>"
+  "<a href=\"./\">← Back to the Explore Guide</a>": "<a href=\"./\">← 탐험 가이드로 돌아가기</a>",
+  "🔑 Entry door code": "🔑 현관문 출입 코드",
+  "Where's my code?": "제 코드는 어디에 있나요?",
+  "For security, entry door codes are never published in this guide. Your unique front-door code is sent to your Airbnb messages on the morning of check-in. Your room door code is just below in the Check-in section.": "보안을 위해 출입문 코드는 이 가이드에 절대 공개되지 않습니다. 게스트님만의 현관문 코드는 체크인 당일 아침에 Airbnb 메시지로 전송됩니다. 객실 문 코드는 바로 아래 체크인 섹션에 있습니다.",
+  "For security, entry door codes are never published in this guide. Your unique code is sent to your Airbnb messages on the morning of check-in.": "보안을 위해 출입문 코드는 이 가이드에 절대 공개되지 않습니다. 게스트님만의 코드는 체크인 당일 아침에 Airbnb 메시지로 전송됩니다."
  },
  "places": {
   "Cafe Paradise": {

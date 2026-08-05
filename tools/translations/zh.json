@@ -555,7 +555,11 @@
   "How does Airbnb's rating system work?": "爱彼迎的评分系统是如何运作的?",
   "Explore Guide": "探索指南",
   "🗺️ Explore Guide — our street, Toronto &amp; Niagara <span style=\"margin-left:auto;color:var(--gold-ink)\">→</span>": "🗺️ 探索指南 — 我们的街区、多伦多与尼亚加拉",
-  "<a href=\"./\">← Back to the Explore Guide</a>": "<a href=\"./\">← 返回探索指南</a>"
+  "<a href=\"./\">← Back to the Explore Guide</a>": "<a href=\"./\">← 返回探索指南</a>",
+  "🔑 Entry door code": "🔑 入户门密码",
+  "Where's my code?": "我的密码在哪里？",
+  "For security, entry door codes are never published in this guide. Your unique front-door code is sent to your Airbnb messages on the morning of check-in. Your room door code is just below in the Check-in section.": "出于安全考虑，本指南中不会公布任何门锁密码。您的专属大门密码会在入住当天早上通过 Airbnb 消息发送给您。您的房间门密码就在下方的\"入住\"部分。",
+  "For security, entry door codes are never published in this guide. Your unique code is sent to your Airbnb messages on the morning of check-in.": "出于安全考虑，本指南中不会公布任何门锁密码。您的专属密码会在入住当天早上通过 Airbnb 消息发送给您。"
  },
  "places": {
   "Cafe Paradise": {

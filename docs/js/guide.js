@@ -179,8 +179,15 @@ function showSecret(icon, value, copied){
     value + "</div>" + (copied ? '<div class="sp-note">' + T("copiedClip","Copied to clipboard") + "</div>" : "") + "</div>";
   secretEl.classList.add("show");
   clearTimeout(secretTimer);
-  secretTimer = setTimeout(function(){ secretEl.classList.remove("show"); }, 4200);
+  secretTimer = setTimeout(function(){ secretEl.classList.remove("show"); }, arguments.length > 3 && arguments[3] ? arguments[3] : 4200);
 }
+/* essentials strip: "where's my entry code?" info popup (no code to copy — text lives in the hidden span, translated like everything else) */
+document.addEventListener("click", function(e){
+  var n = e.target.closest && e.target.closest(".ess-note");
+  if(!n) return;
+  var body = n.querySelector(".ess-note-body");
+  if(body) showSecret("🔑", '<span class="sp-txt">' + body.innerHTML + "</span>", false, 14000);
+});
 function secretIcon(r){ return r.closest && r.closest(".essentials") ? "📶" : "🔑"; }
 document.addEventListener("click", function(e){
   var r = e.target.closest && e.target.closest(".reveal");
@@ -582,6 +589,7 @@ function txt(el){ return el ? (el.innerText || el.textContent || "").replace(/\s
    every language, so keep them in each language's groups when translating. */
 var SEARCH_SYN = {
   en: [
+    ["code","codes","pin","passcode","keypad","entry","unlock","door"],
     ["garbage","trash","rubbish","bin","bins","waste","litter","recycle","recycling","compost","dispose","disposal"],
     ["wifi","wi-fi","internet","wireless","network","password","hotspot"],
     ["ac","air conditioning","air conditioner","aircon","cooling","heat","heater","heating","thermostat","temperature","warm","cold","blanket","climate"],
@@ -607,6 +615,7 @@ var SEARCH_SYN = {
     ["address","location","directions","map"]
   ],
   fr: [
+    ["code","codes","pin","digicode","clavier","entree","porte","serrure","deverrouiller"],
     ["poubelle","poubelles","ordures","déchets","recyclage","recycler","compost","tri","corbeille","détritus"],
     ["wifi","wi-fi","internet","sans fil","réseau","mot de passe"],
     ["climatisation","clim","climatiseur","air conditionné","chauffage","chauffer","radiateur","température","froid","chaud","couverture","thermostat"],
@@ -632,6 +641,7 @@ var SEARCH_SYN = {
     ["adresse","emplacement","localisation","itinéraire","direction","carte","plan"]
   ],
   es: [
+    ["code","codigo","codigos","pin","clave","contrasena","teclado","puerta","entrada"],
     ["basura","desperdicios","desechos","reciclaje","reciclar","compost","cubo","papelera","tacho"],
     ["wifi","wi-fi","internet","inalámbrico","red","contraseña","clave"],
     ["aire acondicionado","aire","clima","calefacción","calentador","calor","frío","temperatura","manta","termostato"],
@@ -657,6 +667,7 @@ var SEARCH_SYN = {
     ["dirección","ubicación","localización","cómo llegar","mapa"]
   ],
   de: [
+    ["code","codes","pin","zugangscode","tuercode","tastatur","tuer","eingang","schluessel"],
     ["müll","abfall","recycling","wiederverwertung","kompost","mülleimer","tonne","biomüll"],
     ["wlan","wifi","wi-fi","internet","drahtlos","netzwerk","passwort","kennwort"],
     ["klimaanlage","klima","kühlung","heizung","heizen","heizkörper","temperatur","kalt","warm","decke","thermostat"],
@@ -682,6 +693,7 @@ var SEARCH_SYN = {
     ["adresse","standort","lage","wegbeschreibung","richtung","karte"]
   ],
   pt: [
+    ["code","codigo","codigos","pin","senha","teclado","porta","entrada","fechadura"],
     ["lixo","resíduos","reciclagem","reciclar","compostagem","compost","lixeira","cesto"],
     ["wifi","wi-fi","internet","sem fio","rede","senha","palavra-passe"],
     ["ar condicionado","ar","clima","refrigeração","aquecimento","aquecedor","calor","frio","temperatura","cobertor","manta","termostato"],
@@ -707,6 +719,7 @@ var SEARCH_SYN = {
     ["endereço","localização","local","como chegar","direção","mapa"]
   ],
   ko: [
+    ["code","코드","비밀번호","비번","도어락","현관","출입","문","핀"],
     ["쓰레기","분리수거","재활용","퇴비","음식물","휴지통"],
     ["와이파이","wifi","인터넷","무선","네트워크","비밀번호","암호","패스워드"],
     ["에어컨","냉방","난방","히터","온도","추워","더워","따뜻","담요"],
@@ -732,6 +745,7 @@ var SEARCH_SYN = {
     ["주소","위치","길찾기","방향","지도","오시는 길"]
   ],
   zh: [
+    ["code","密码","门锁","门禁","大门","入户","开门","密码锁","pin"],
     ["垃圾","废物","回收","分类","堆肥","厨余","垃圾桶"],
     ["wifi","无线","网络","上网","互联网","密码"],
     ["空调","冷气","制冷","暖气","加热","取暖器","温度","毯子","恒温"],
@@ -757,6 +771,7 @@ var SEARCH_SYN = {
     ["地址","位置","路线","方向","地图","怎么走"]
   ],
   ja: [
+    ["code","コード","暗証番号","パスコード","キーパッド","鍵","ドア","玄関","解錠"],
     ["ゴミ","ごみ","生ゴミ","リサイクル","分別","コンポスト","堆肥"],
     ["wifi","ワイファイ","無線","ネット","インターネット","パスワード","暗証"],
     ["エアコン","冷房","暖房","ヒーター","温度","寒い","暑い","毛布","サーモスタット"],
@@ -782,6 +797,7 @@ var SEARCH_SYN = {
     ["住所","場所","行き方","道順","地図","アクセス"]
   ],
   hi: [
+    ["code","कोड","पिन","पासकोड","ताला","दरवाजा","दरवाज़ा","एंट्री","लॉक"],
     ["कचरा","कूड़ा","कूड़ेदान","रीसाइक्लिंग","रीसायकल","कम्पोस्ट","खाद","garbage","trash"],
     ["वाईफाई","wifi","इंटरनेट","इन्टरनेट","नेटवर्क","पासवर्ड","वायरलेस"],
     ["एसी","ac","वातानुकूलन","हीटर","हीटिंग","तापमान","ठंड","गरम","कंबल","कम्बल"],
@@ -837,6 +853,8 @@ function buildGuideIndex(){
   if(ess) ess.querySelectorAll(".ess-item").forEach(function(it){
     add("", txt(it.querySelector(".ess-label")), txt(it.querySelector(".ess-value, .ess-act, .reveal")), it);
   });
+  var essNote = document.querySelector(".ess-note");
+  if(essNote) add("", txt(essNote.querySelector(".ess-label")), txt(essNote.querySelector(".ess-note-body")), essNote);
   var nudge = document.querySelector(".nudge");
   if(nudge) add("", txt(nudge.querySelector("h3")), txt(nudge), nudge);
   document.querySelectorAll("section.section").forEach(function(sec){

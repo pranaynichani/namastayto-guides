@@ -555,7 +555,11 @@
   "How does Airbnb's rating system work?": "Airbnb का रेटिंग सिस्टम कैसे काम करता है?",
   "Explore Guide": "एक्सप्लोर गाइड",
   "🗺️ Explore Guide — our street, Toronto &amp; Niagara <span style=\"margin-left:auto;color:var(--gold-ink)\">→</span>": "🗺️ एक्सप्लोर गाइड — हमारी गली, टोरंटो और नियाग्रा",
-  "<a href=\"./\">← Back to the Explore Guide</a>": "<a href=\"./\">← एक्सप्लोर गाइड पर वापस जाएँ</a>"
+  "<a href=\"./\">← Back to the Explore Guide</a>": "<a href=\"./\">← एक्सप्लोर गाइड पर वापस जाएँ</a>",
+  "🔑 Entry door code": "🔑 एंट्री दरवाज़े का कोड",
+  "Where's my code?": "मेरा कोड कहाँ है?",
+  "For security, entry door codes are never published in this guide. Your unique front-door code is sent to your Airbnb messages on the morning of check-in. Your room door code is just below in the Check-in section.": "सुरक्षा के लिए, दरवाज़े के कोड इस गाइड में कभी नहीं दिए जाते। आपका यूनीक फ्रंट-डोर कोड चेक-इन की सुबह आपके Airbnb मैसेज में भेजा जाता है। आपके कमरे के दरवाज़े का कोड ठीक नीचे चेक-इन सेक्शन में है।",
+  "For security, entry door codes are never published in this guide. Your unique code is sent to your Airbnb messages on the morning of check-in.": "सुरक्षा के लिए, दरवाज़े के कोड इस गाइड में कभी नहीं दिए जाते। आपका यूनीक कोड चेक-इन की सुबह आपके Airbnb मैसेज में भेजा जाता है।"
  },
  "places": {
   "Cafe Paradise": {

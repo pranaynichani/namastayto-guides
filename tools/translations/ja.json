@@ -555,7 +555,11 @@
   "How does Airbnb's rating system work?": "Airbnbの評価システムはどんな仕組みですか?",
   "Explore Guide": "おでかけガイド",
   "🗺️ Explore Guide — our street, Toronto &amp; Niagara <span style=\"margin-left:auto;color:var(--gold-ink)\">→</span>": "🗺️ おでかけガイド — ご近所からトロント、ナイアガラまで",
-  "<a href=\"./\">← Back to the Explore Guide</a>": "<a href=\"./\">← おでかけガイドに戻る</a>"
+  "<a href=\"./\">← Back to the Explore Guide</a>": "<a href=\"./\">← おでかけガイドに戻る</a>",
+  "🔑 Entry door code": "🔑 玄関ドアの暗証番号",
+  "Where's my code?": "暗証番号はどこ？",
+  "For security, entry door codes are never published in this guide. Your unique front-door code is sent to your Airbnb messages on the morning of check-in. Your room door code is just below in the Check-in section.": "セキュリティのため、ドアの暗証番号はこのガイドには掲載していません。玄関ドアの専用コードは、チェックイン当日の朝にAirbnbのメッセージでお送りします。お部屋のドアのコードは、このすぐ下のチェックインのセクションにあります。",
+  "For security, entry door codes are never published in this guide. Your unique code is sent to your Airbnb messages on the morning of check-in.": "セキュリティのため、ドアの暗証番号はこのガイドには掲載していません。専用コードは、チェックイン当日の朝にAirbnbのメッセージでお送りします。"
  },
  "places": {
   "Cafe Paradise": {

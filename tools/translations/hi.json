@@ -80,7 +80,6 @@
   "The South Room": "साउथ रूम",
   "The East Room": "ईस्ट रूम",
   "The Basement Suite": "बेसमेंट सुइट",
-  "Around Us": "आस-पास की गाइड",
   "NamastayTO": "NamastayTO",
   "383 Concord Ave, Toronto · your home in Bloorcourt": "383 Concord Ave, टोरंटो · Bloorcourt में आपका घर",
   "383 Concord Ave, Toronto · your own private entrance": "383 Concord Ave, टोरंटो · अपने निजी प्रवेश द्वार के साथ",
@@ -289,7 +288,6 @@
   "🐛 <strong>Bugs happen in basements</strong> — especially in wet weather. We treat preventatively and provide bug spray (under the bathroom sink). Keeping doors and windows closed helps a lot": "🐛 <strong>बेसमेंट में कीड़े हो सकते हैं</strong> — ख़ासकर नमी वाले मौसम में। हम पहले से बचाव करते हैं और बग स्प्रे देते हैं (बाथरूम सिंक के नीचे)। दरवाज़े और खिड़कियाँ बंद रखने से बहुत मदद मिलती है",
   "<span class=\"orn\">✦</span> Explore the neighbourhood": "<span class=\"orn\">✦</span> पड़ोस घूमें",
   "You're in one of Toronto's most walkable pockets — Walk Score 95. Cafés, world-class food, comedy clubs and late-night eats, all minutes from the door.": "आप टोरंटो के सबसे पैदल-अनुकूल इलाकों में से एक में हैं — वॉक स्कोर 95। कैफ़े, विश्व-स्तरीय खाना, कॉमेडी क्लब और देर रात का भोजन, सब दरवाज़े से कुछ ही मिनट दूर।",
-  "🗺️ Around Us — our neighbourhood guide <span style=\"margin-left:auto;color:var(--gold-ink)\">→</span>": "🗺️ आस-पास की गाइड — हमारे पड़ोस की मार्गदर्शिका <span style=\"margin-left:auto;color:var(--gold-ink)\">→</span>",
   "90+ hand-picked local spots with live \"open now\" badges, walking times and one-tap directions — plus our Toronto bucket list and Niagara day-trip planner.": "90+ हाथ से चुनी स्थानीय जगहें, लाइव ‘अभी खुला’ बैज, पैदल समय और वन-टैप रास्ते के साथ — साथ ही हमारी टोरंटो बकेट लिस्ट और नायग्रा दिन-यात्रा योजना।",
   "Want tours &amp; tickets? Browse <a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">our personally curated Toronto experiences</a> — walking tours, boat cruises, CityPASS and more.": "टूर व टिकट चाहिए? <a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">हमारे ख़ुद चुने टोरंटो अनुभव</a> देखें — वॉकिंग टूर, बोट क्रूज़, CityPASS और भी बहुत कुछ।",
   "<span class=\"orn\">✦</span> Help &amp; FAQ": "<span class=\"orn\">✦</span> मदद व सामान्य प्रश्न",
@@ -531,7 +529,6 @@
   "<a href=\"https://tpx.lu/IW81zDSi\" target=\"_blank\" rel=\"noopener\">Pre-booked airport transfers</a>": "<a href=\"https://tpx.lu/IW81zDSi\" target=\"_blank\" rel=\"noopener\">पहले से बुक की गई एयरपोर्ट ट्रांसफ़र सेवा</a>",
   "<a href=\"https://www.discovercars.com/?a_aid=pranaynichani\" target=\"_blank\" rel=\"noopener\">Rental-car comparison for day trips</a>": "<a href=\"https://www.discovercars.com/?a_aid=pranaynichani\" target=\"_blank\" rel=\"noopener\">डे-ट्रिप के लिए किराए की कारों की तुलना</a>",
   "Links that aren't listed here — restaurants, bars, cafés, maps, official team ticket pages — earn us nothing. They're there because we love the places.": "जो लिंक यहाँ नहीं हैं — रेस्तरां, बार, कैफ़े, नक्शे, टीमों के आधिकारिक टिकट पेज — उनसे हमें कुछ नहीं मिलता। वे इसलिए हैं क्योंकि हमें वे जगहें पसंद हैं।",
-  "<a href=\"./\">← Back to the Around Us guide</a>": "<a href=\"./\">← Around Us गाइड पर वापस जाएँ</a>",
   "📍 Map ↗": "📍 नक्शा ↗",
   "⛴️ Ferry tickets ↗": "⛴️ फ़ेरी टिकट ↗",
   "ℹ️ Visitor info ↗": "ℹ️ विज़िटर जानकारी ↗",
@@ -555,7 +552,10 @@
   "Terrible. Shut down the listing immediately.": "बहुत बुरा। लिस्टिंग तुरंत बंद करो।",
   "I'd rather sleep in my car!": "इससे तो मैं अपनी कार में सो जाता!",
   "We hope you'll be back to visit again soon!": "उम्मीद है आप जल्द फिर आएँगे!",
-  "How does Airbnb's rating system work?": "Airbnb का रेटिंग सिस्टम कैसे काम करता है?"
+  "How does Airbnb's rating system work?": "Airbnb का रेटिंग सिस्टम कैसे काम करता है?",
+  "Explore Guide": "एक्सप्लोर गाइड",
+  "🗺️ Explore Guide — our street, Toronto &amp; Niagara <span style=\"margin-left:auto;color:var(--gold-ink)\">→</span>": "🗺️ एक्सप्लोर गाइड — हमारी गली, टोरंटो और नियाग्रा",
+  "<a href=\"./\">← Back to the Explore Guide</a>": "<a href=\"./\">← एक्सप्लोर गाइड पर वापस जाएँ</a>"
  },
  "places": {
   "Cafe Paradise": {

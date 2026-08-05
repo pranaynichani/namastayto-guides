@@ -80,7 +80,6 @@
   "The South Room": "南屋",
   "The East Room": "东屋",
   "The Basement Suite": "地下套房",
-  "Around Us": "周边指南",
   "NamastayTO": "NamastayTO",
   "383 Concord Ave, Toronto · your home in Bloorcourt": "383 Concord Ave, 多伦多 · 你在 Bloorcourt 的家",
   "383 Concord Ave, Toronto · your own private entrance": "383 Concord Ave, 多伦多 · 拥有专属私人入口",
@@ -289,7 +288,6 @@
   "🐛 <strong>Bugs happen in basements</strong> — especially in wet weather. We treat preventatively and provide bug spray (under the bathroom sink). Keeping doors and windows closed helps a lot": "🐛 <strong>地下室难免会有虫子</strong> — 尤其在潮湿天气。我们会做预防处理并备有杀虫剂（在卫生间水槽下方）。关好门窗会很有帮助",
   "<span class=\"orn\">✦</span> Explore the neighbourhood": "<span class=\"orn\">✦</span> 探索周边",
   "You're in one of Toronto's most walkable pockets — Walk Score 95. Cafés, world-class food, comedy clubs and late-night eats, all minutes from the door.": "你所在的是多伦多最适合步行的街区之一 — 步行指数95。咖啡馆、世界级美食、喜剧俱乐部和深夜小吃，都在步行几分钟之内。",
-  "🗺️ Around Us — our neighbourhood guide <span style=\"margin-left:auto;color:var(--gold-ink)\">→</span>": "🗺️ 周边指南 — 我们的社区导览 <span style=\"margin-left:auto;color:var(--gold-ink)\">→</span>",
   "90+ hand-picked local spots with live \"open now\" badges, walking times and one-tap directions — plus our Toronto bucket list and Niagara day-trip planner.": "90多个精选本地去处，配有实时“营业中”标记、步行时间和一键导航 — 还有我们的多伦多打卡清单和尼亚加拉一日游攻略。",
   "Want tours &amp; tickets? Browse <a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">our personally curated Toronto experiences</a> — walking tours, boat cruises, CityPASS and more.": "想要游览项目和门票？浏览 <a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">我们亲自精选的多伦多体验</a> — 步行游、游船、CityPASS 等等。",
   "<span class=\"orn\">✦</span> Help &amp; FAQ": "<span class=\"orn\">✦</span> 帮助与常见问题",
@@ -531,7 +529,6 @@
   "<a href=\"https://tpx.lu/IW81zDSi\" target=\"_blank\" rel=\"noopener\">Pre-booked airport transfers</a>": "<a href=\"https://tpx.lu/IW81zDSi\" target=\"_blank\" rel=\"noopener\">预先预订的机场接送</a>",
   "<a href=\"https://www.discovercars.com/?a_aid=pranaynichani\" target=\"_blank\" rel=\"noopener\">Rental-car comparison for day trips</a>": "<a href=\"https://www.discovercars.com/?a_aid=pranaynichani\" target=\"_blank\" rel=\"noopener\">一日游租车比价</a>",
   "Links that aren't listed here — restaurants, bars, cafés, maps, official team ticket pages — earn us nothing. They're there because we love the places.": "未列在这里的链接 — 餐厅、酒吧、咖啡馆、地图、球队官方票务页面 — 不会给我们带来任何收益。它们出现在指南里,只因为我们喜爱这些地方。",
-  "<a href=\"./\">← Back to the Around Us guide</a>": "<a href=\"./\">← 返回 Around Us 指南</a>",
   "📍 Map ↗": "📍 地图 ↗",
   "⛴️ Ferry tickets ↗": "⛴️ 渡轮票 ↗",
   "ℹ️ Visitor info ↗": "ℹ️ 参观信息 ↗",
@@ -555,7 +552,10 @@
   "Terrible. Shut down the listing immediately.": "糟透了。立即下架这个房源。",
   "I'd rather sleep in my car!": "我宁愿睡在自己车里!",
   "We hope you'll be back to visit again soon!": "期待您再次光临!",
-  "How does Airbnb's rating system work?": "爱彼迎的评分系统是如何运作的?"
+  "How does Airbnb's rating system work?": "爱彼迎的评分系统是如何运作的?",
+  "Explore Guide": "探索指南",
+  "🗺️ Explore Guide — our street, Toronto &amp; Niagara <span style=\"margin-left:auto;color:var(--gold-ink)\">→</span>": "🗺️ 探索指南 — 我们的街区、多伦多与尼亚加拉",
+  "<a href=\"./\">← Back to the Explore Guide</a>": "<a href=\"./\">← 返回探索指南</a>"
  },
  "places": {
   "Cafe Paradise": {

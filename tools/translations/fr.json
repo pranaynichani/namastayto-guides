@@ -80,7 +80,6 @@
   "The South Room": "La Chambre Sud",
   "The East Room": "La Chambre Est",
   "The Basement Suite": "La Suite du Sous-sol",
-  "Around Us": "Autour de nous",
   "NamastayTO": "NamastayTO",
   "383 Concord Ave, Toronto · your home in Bloorcourt": "383 Concord Ave, Toronto · votre chez-vous à Bloorcourt",
   "383 Concord Ave, Toronto · your own private entrance": "383 Concord Ave, Toronto · votre entrée privée",
@@ -289,7 +288,6 @@
   "🐛 <strong>Bugs happen in basements</strong> — especially in wet weather. We treat preventatively and provide bug spray (under the bathroom sink). Keeping doors and windows closed helps a lot": "🐛 <strong>Les insectes, ça arrive dans un sous-sol</strong> — surtout par temps humide. Nous traitons en prévention et fournissons un insecticide (sous le lavabo). Garder portes et fenêtres fermées aide beaucoup",
   "<span class=\"orn\">✦</span> Explore the neighbourhood": "<span class=\"orn\">✦</span> Explorez le quartier",
   "You're in one of Toronto's most walkable pockets — Walk Score 95. Cafés, world-class food, comedy clubs and late-night eats, all minutes from the door.": "Vous êtes dans un des coins les plus marchables de Toronto — Walk Score 95. Cafés, cuisine de classe mondiale, clubs d'humour et bouffe de fin de soirée, à quelques minutes de la porte.",
-  "🗺️ Around Us — our neighbourhood guide <span style=\"margin-left:auto;color:var(--gold-ink)\">→</span>": "🗺️ Autour de nous — notre guide du quartier <span style=\"margin-left:auto;color:var(--gold-ink)\">→</span>",
   "90+ hand-picked local spots with live \"open now\" badges, walking times and one-tap directions — plus our Toronto bucket list and Niagara day-trip planner.": "Plus de 90 adresses locales choisies à la main, avec badges « ouvert » en direct, temps de marche et itinéraires en un geste — plus notre liste d'incontournables de Toronto et le planificateur d'excursion à Niagara.",
   "Want tours &amp; tickets? Browse <a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">our personally curated Toronto experiences</a> — walking tours, boat cruises, CityPASS and more.": "Envie de visites et de billets ? Parcourez <a href=\"https://vi.me/s/namastayto\" target=\"_blank\" rel=\"noopener\">nos expériences torontoises sélectionnées par nos soins</a> — visites à pied, croisières, CityPASS et plus.",
   "<span class=\"orn\">✦</span> Help &amp; FAQ": "<span class=\"orn\">✦</span> Aide &amp; FAQ",
@@ -531,7 +529,6 @@
   "<a href=\"https://tpx.lu/IW81zDSi\" target=\"_blank\" rel=\"noopener\">Pre-booked airport transfers</a>": "<a href=\"https://tpx.lu/IW81zDSi\" target=\"_blank\" rel=\"noopener\">Transferts aéroport réservés à l'avance</a>",
   "<a href=\"https://www.discovercars.com/?a_aid=pranaynichani\" target=\"_blank\" rel=\"noopener\">Rental-car comparison for day trips</a>": "<a href=\"https://www.discovercars.com/?a_aid=pranaynichani\" target=\"_blank\" rel=\"noopener\">Comparateur de locations de voitures pour les excursions</a>",
   "Links that aren't listed here — restaurants, bars, cafés, maps, official team ticket pages — earn us nothing. They're there because we love the places.": "Les liens qui ne figurent pas ici — restaurants, bars, cafés, cartes, billetteries officielles des équipes — ne nous rapportent rien. Ils sont là parce que nous aimons ces adresses.",
-  "<a href=\"./\">← Back to the Around Us guide</a>": "<a href=\"./\">← Retour au guide Around Us</a>",
   "📍 Map ↗": "📍 Carte ↗",
   "⛴️ Ferry tickets ↗": "⛴️ Billets de ferry ↗",
   "ℹ️ Visitor info ↗": "ℹ️ Infos visiteurs ↗",
@@ -555,7 +552,10 @@
   "Terrible. Shut down the listing immediately.": "Terrible. Fermez l'annonce immédiatement.",
   "I'd rather sleep in my car!": "Je préférerais dormir dans ma voiture !",
   "We hope you'll be back to visit again soon!": "Nous espérons vous revoir bientôt !",
-  "How does Airbnb's rating system work?": "Comment fonctionne le système de notation Airbnb ?"
+  "How does Airbnb's rating system work?": "Comment fonctionne le système de notation Airbnb ?",
+  "Explore Guide": "Guide Découverte",
+  "🗺️ Explore Guide — our street, Toronto &amp; Niagara <span style=\"margin-left:auto;color:var(--gold-ink)\">→</span>": "🗺️ Guide Découverte — notre rue, Toronto &amp; Niagara",
+  "<a href=\"./\">← Back to the Explore Guide</a>": "<a href=\"./\">← Retour au Guide Découverte</a>"
  },
  "places": {
   "Cafe Paradise": {

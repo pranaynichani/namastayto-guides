@@ -546,7 +546,6 @@
   "Don't go to the front door! Follow the arrow — your entrance is along the <strong>right side</strong> of the house, at the back": "정문으로 가지 마세요! 화살표를 따라가세요 — 입구는 집 <strong>오른쪽</strong>을 따라 뒤편에 있습니다",
   "⭐ Are we earning a 5-star review?": "⭐ 저희가 별 5개를 받을 만한가요?",
   "When rating your stay, please keep in mind that our rating system differs from classic ratings. If our average rating falls below 4.3 stars we can be shut down. To help with any confusion, we've prepared the following guide:": "숙박을 평가하실 때, 저희 평점 시스템은 일반적인 별점과 다르다는 점을 기억해 주세요. 평균 평점이 4.3점 아래로 내려가면 숙소가 폐쇄될 수 있습니다. 혼동을 막기 위해 작은 가이드를 준비했습니다:",
-  "Perfection doesn't exist, but we were very happy.": "완벽은 없지만, 우리는 매우 만족했다.",
   "There were several issues. Needs improvement.": "여러 문제가 있었다. 개선이 필요하다.",
   "There were major issues with my stay.": "숙박 중 큰 문제가 있었다.",
   "Terrible. Shut down the listing immediately.": "끔찍했다. 당장 숙소를 폐쇄하라.",
@@ -559,7 +558,8 @@
   "🔑 Entry door code": "🔑 현관문 출입 코드",
   "Where's my code?": "제 코드는 어디에 있나요?",
   "For security, entry door codes are never published in this guide. Your unique front-door code is sent to your Airbnb messages on the morning of check-in. Your room door code is just below in the Check-in section.": "보안을 위해 출입문 코드는 이 가이드에 절대 공개되지 않습니다. 게스트님만의 현관문 코드는 체크인 당일 아침에 Airbnb 메시지로 전송됩니다. 객실 문 코드는 바로 아래 체크인 섹션에 있습니다.",
-  "For security, entry door codes are never published in this guide. Your unique code is sent to your Airbnb messages on the morning of check-in.": "보안을 위해 출입문 코드는 이 가이드에 절대 공개되지 않습니다. 게스트님만의 코드는 체크인 당일 아침에 Airbnb 메시지로 전송됩니다."
+  "For security, entry door codes are never published in this guide. Your unique code is sent to your Airbnb messages on the morning of check-in.": "보안을 위해 출입문 코드는 이 가이드에 절대 공개되지 않습니다. 게스트님만의 코드는 체크인 당일 아침에 Airbnb 메시지로 전송됩니다.",
+  "Perfection doesn't exist, but we were happy.": "완벽은 없지만, 우리는 만족했다."
  },
  "places": {
   "Cafe Paradise": {

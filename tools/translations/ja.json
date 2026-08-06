@@ -546,7 +546,6 @@
   "Don't go to the front door! Follow the arrow — your entrance is along the <strong>right side</strong> of the house, at the back": "正面玄関ではありません!矢印に沿って — 入口は家の<strong>右側</strong>を通った奥にあります",
   "⭐ Are we earning a 5-star review?": "⭐ 私たちは星5つに値しますか?",
   "When rating your stay, please keep in mind that our rating system differs from classic ratings. If our average rating falls below 4.3 stars we can be shut down. To help with any confusion, we've prepared the following guide:": "ご滞在を評価される際は、私たちの評価システムが一般的な星評価とは異なることをご承知おきください。平均評価が4.3を下回ると、掲載が停止されることがあります。誤解のないよう、小さなガイドをご用意しました:",
-  "Perfection doesn't exist, but we were very happy.": "完璧は存在しない。でも私たちはとても満足だった。",
   "There were several issues. Needs improvement.": "いくつか問題があった。改善が必要。",
   "There were major issues with my stay.": "滞在中に大きな問題があった。",
   "Terrible. Shut down the listing immediately.": "ひどかった。今すぐ掲載を停止すべき。",
@@ -559,7 +558,8 @@
   "🔑 Entry door code": "🔑 玄関ドアの暗証番号",
   "Where's my code?": "暗証番号はどこ？",
   "For security, entry door codes are never published in this guide. Your unique front-door code is sent to your Airbnb messages on the morning of check-in. Your room door code is just below in the Check-in section.": "セキュリティのため、ドアの暗証番号はこのガイドには掲載していません。玄関ドアの専用コードは、チェックイン当日の朝にAirbnbのメッセージでお送りします。お部屋のドアのコードは、このすぐ下のチェックインのセクションにあります。",
-  "For security, entry door codes are never published in this guide. Your unique code is sent to your Airbnb messages on the morning of check-in.": "セキュリティのため、ドアの暗証番号はこのガイドには掲載していません。専用コードは、チェックイン当日の朝にAirbnbのメッセージでお送りします。"
+  "For security, entry door codes are never published in this guide. Your unique code is sent to your Airbnb messages on the morning of check-in.": "セキュリティのため、ドアの暗証番号はこのガイドには掲載していません。専用コードは、チェックイン当日の朝にAirbnbのメッセージでお送りします。",
+  "Perfection doesn't exist, but we were happy.": "完璧は存在しない。でも私たちは満足だった。"
  },
  "places": {
   "Cafe Paradise": {

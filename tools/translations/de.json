@@ -546,7 +546,6 @@
   "Don't go to the front door! Follow the arrow — your entrance is along the <strong>right side</strong> of the house, at the back": "Nicht zur Vordertür! Folgt dem Pfeil — euer Eingang liegt an der <strong>rechten Seite</strong> des Hauses, hinten",
   "⭐ Are we earning a 5-star review?": "⭐ Verdienen wir eine 5-Sterne-Bewertung?",
   "When rating your stay, please keep in mind that our rating system differs from classic ratings. If our average rating falls below 4.3 stars we can be shut down. To help with any confusion, we've prepared the following guide:": "Denkt beim Bewerten eures Aufenthalts bitte daran, dass sich unser Bewertungssystem von klassischen Bewertungen unterscheidet. Fällt unser Durchschnitt unter 4,3 Sterne, kann unser Inserat geschlossen werden. Zur Orientierung haben wir diesen kleinen Leitfaden erstellt:",
-  "Perfection doesn't exist, but we were very happy.": "Perfektion gibt es nicht, aber wir waren sehr glücklich.",
   "There were several issues. Needs improvement.": "Es gab mehrere Probleme. Verbesserungswürdig.",
   "There were major issues with my stay.": "Es gab größere Probleme bei meinem Aufenthalt.",
   "Terrible. Shut down the listing immediately.": "Furchtbar. Schließt das Inserat sofort.",
@@ -559,7 +558,8 @@
   "🔑 Entry door code": "🔑 Code für die Eingangstür",
   "Where's my code?": "Wo ist mein Code?",
   "For security, entry door codes are never published in this guide. Your unique front-door code is sent to your Airbnb messages on the morning of check-in. Your room door code is just below in the Check-in section.": "Aus Sicherheitsgründen werden Türcodes nie in diesem Guide veröffentlicht. Euer persönlicher Code für die Haustür wird euch am Morgen des Check-ins in euren Airbnb-Nachrichten zugeschickt. Den Code für eure Zimmertür findet ihr direkt weiter unten im Abschnitt Check-in.",
-  "For security, entry door codes are never published in this guide. Your unique code is sent to your Airbnb messages on the morning of check-in.": "Aus Sicherheitsgründen werden Türcodes nie in diesem Guide veröffentlicht. Euer persönlicher Code wird euch am Morgen des Check-ins in euren Airbnb-Nachrichten zugeschickt."
+  "For security, entry door codes are never published in this guide. Your unique code is sent to your Airbnb messages on the morning of check-in.": "Aus Sicherheitsgründen werden Türcodes nie in diesem Guide veröffentlicht. Euer persönlicher Code wird euch am Morgen des Check-ins in euren Airbnb-Nachrichten zugeschickt.",
+  "Perfection doesn't exist, but we were happy.": "Perfektion gibt es nicht, aber wir waren glücklich."
  },
  "places": {
   "Cafe Paradise": {

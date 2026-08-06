@@ -546,7 +546,6 @@
   "Don't go to the front door! Follow the arrow — your entrance is along the <strong>right side</strong> of the house, at the back": "不要走前门!请沿箭头方向 — 您的入口在房子<strong>右侧</strong>,位于后方",
   "⭐ Are we earning a 5-star review?": "⭐ 我们配得上5星好评吗?",
   "When rating your stay, please keep in mind that our rating system differs from classic ratings. If our average rating falls below 4.3 stars we can be shut down. To help with any confusion, we've prepared the following guide:": "为您的住宿评分时,请记住我们的评分系统与传统评分不同。如果我们的平均评分低于4.3星,房源可能会被下架。为避免误解,我们准备了以下小指南:",
-  "Perfection doesn't exist, but we were very happy.": "完美并不存在,但我们住得非常开心。",
   "There were several issues. Needs improvement.": "有好几个问题。需要改进。",
   "There were major issues with my stay.": "住宿期间有重大问题。",
   "Terrible. Shut down the listing immediately.": "糟透了。立即下架这个房源。",
@@ -559,7 +558,8 @@
   "🔑 Entry door code": "🔑 入户门密码",
   "Where's my code?": "我的密码在哪里？",
   "For security, entry door codes are never published in this guide. Your unique front-door code is sent to your Airbnb messages on the morning of check-in. Your room door code is just below in the Check-in section.": "出于安全考虑，本指南中不会公布任何门锁密码。您的专属大门密码会在入住当天早上通过 Airbnb 消息发送给您。您的房间门密码就在下方的\"入住\"部分。",
-  "For security, entry door codes are never published in this guide. Your unique code is sent to your Airbnb messages on the morning of check-in.": "出于安全考虑，本指南中不会公布任何门锁密码。您的专属密码会在入住当天早上通过 Airbnb 消息发送给您。"
+  "For security, entry door codes are never published in this guide. Your unique code is sent to your Airbnb messages on the morning of check-in.": "出于安全考虑，本指南中不会公布任何门锁密码。您的专属密码会在入住当天早上通过 Airbnb 消息发送给您。",
+  "Perfection doesn't exist, but we were happy.": "完美并不存在,但我们住得开心。"
  },
  "places": {
   "Cafe Paradise": {

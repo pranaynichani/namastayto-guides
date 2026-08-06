@@ -546,7 +546,6 @@
   "Don't go to the front door! Follow the arrow — your entrance is along the <strong>right side</strong> of the house, at the back": "सामने के दरवाज़े पर न जाएँ! तीर के निशान का पालन करें — आपका प्रवेश घर की <strong>दाईं ओर</strong> से होकर पीछे है",
   "⭐ Are we earning a 5-star review?": "⭐ क्या हम 5-स्टार रिव्यू के हक़दार हैं?",
   "When rating your stay, please keep in mind that our rating system differs from classic ratings. If our average rating falls below 4.3 stars we can be shut down. To help with any confusion, we've prepared the following guide:": "अपने प्रवास को रेट करते समय ध्यान रखें कि हमारा रेटिंग सिस्टम आम रेटिंग से अलग है। अगर हमारी औसत रेटिंग 4.3 स्टार से नीचे जाती है तो हमारी लिस्टिंग बंद हो सकती है। किसी भी उलझन से बचने के लिए हमने यह छोटी गाइड बनाई है:",
-  "Perfection doesn't exist, but we were very happy.": "परफ़ेक्शन मौजूद नहीं, फिर भी हम बहुत खुश थे।",
   "There were several issues. Needs improvement.": "कई दिक्कतें थीं। सुधार की ज़रूरत है।",
   "There were major issues with my stay.": "मेरे प्रवास में बड़ी दिक्कतें थीं।",
   "Terrible. Shut down the listing immediately.": "बहुत बुरा। लिस्टिंग तुरंत बंद करो।",
@@ -559,7 +558,8 @@
   "🔑 Entry door code": "🔑 एंट्री दरवाज़े का कोड",
   "Where's my code?": "मेरा कोड कहाँ है?",
   "For security, entry door codes are never published in this guide. Your unique front-door code is sent to your Airbnb messages on the morning of check-in. Your room door code is just below in the Check-in section.": "सुरक्षा के लिए, दरवाज़े के कोड इस गाइड में कभी नहीं दिए जाते। आपका यूनीक फ्रंट-डोर कोड चेक-इन की सुबह आपके Airbnb मैसेज में भेजा जाता है। आपके कमरे के दरवाज़े का कोड ठीक नीचे चेक-इन सेक्शन में है।",
-  "For security, entry door codes are never published in this guide. Your unique code is sent to your Airbnb messages on the morning of check-in.": "सुरक्षा के लिए, दरवाज़े के कोड इस गाइड में कभी नहीं दिए जाते। आपका यूनीक कोड चेक-इन की सुबह आपके Airbnb मैसेज में भेजा जाता है।"
+  "For security, entry door codes are never published in this guide. Your unique code is sent to your Airbnb messages on the morning of check-in.": "सुरक्षा के लिए, दरवाज़े के कोड इस गाइड में कभी नहीं दिए जाते। आपका यूनीक कोड चेक-इन की सुबह आपके Airbnb मैसेज में भेजा जाता है।",
+  "Perfection doesn't exist, but we were happy.": "परफ़ेक्शन मौजूद नहीं, फिर भी हम खुश थे।"
  },
  "places": {
   "Cafe Paradise": {

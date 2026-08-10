@@ -923,6 +923,13 @@ function openDetailsChain(el){
   var d = el.closest("details");
   while(d){ d.open = true; d = d.parentElement && d.parentElement.closest("details"); }
   if(el.tagName === "DETAILS") el.open = true;
+  /* results can also hide inside an arrival-picker tab (display:none panel) —
+     switch to that tab so the target is actually visible */
+  var panel = el.closest(".arrive-panel");
+  if(panel && !panel.classList.contains("on")){
+    var btn = document.querySelector('.arrive-pick button[data-panel="' + panel.id + '"]');
+    if(btn) btn.click(); else panel.classList.add("on");
+  }
 }
 function goToResult(m){
   if(!m) return;
@@ -932,7 +939,11 @@ function goToResult(m){
   /* Aim, then keep re-checking the landing spot: lazy photos above the target
      can finish loading mid-scroll and shift the layout under us. */
   var wanted = function(){
-    var y = target.getBoundingClientRect().top + window.scrollY - 96;
+    /* if the target is still hidden somehow, aim at its nearest visible
+       ancestor instead of computing a garbage position from a 0-size rect */
+    var el = target;
+    while(el && !el.getBoundingClientRect().height && el.parentElement) el = el.parentElement;
+    var y = el.getBoundingClientRect().top + window.scrollY - 96;
     return y < 0 ? 0 : y;
   };
   var tries = 0;

@@ -929,9 +929,25 @@ function goToResult(m){
   closeGuideSearch();
   var target = m.target;
   openDetailsChain(target);
-  setTimeout(function(){
+  /* Aim, then keep re-checking the landing spot: lazy photos above the target
+     can finish loading mid-scroll and shift the layout under us. */
+  var wanted = function(){
     var y = target.getBoundingClientRect().top + window.scrollY - 96;
-    window.scrollTo({top: y < 0 ? 0 : y, behavior:"smooth"});
+    return y < 0 ? 0 : y;
+  };
+  var tries = 0;
+  var settle = function(){
+    tries++;
+    if(Math.abs(window.scrollY - wanted()) > 4 && tries < 8){
+      /* "instant", not "auto": the page CSS sets scroll-behavior:smooth, and
+         "auto" defers to that — corrections must jump, not animate. */
+      window.scrollTo({top: wanted(), behavior:"instant"});
+    }
+    if(tries < 8) setTimeout(settle, 250);
+  };
+  setTimeout(function(){
+    window.scrollTo({top: wanted(), behavior:"smooth"});
+    setTimeout(settle, 700);
     target.classList.add("search-flash");
     setTimeout(function(){ target.classList.remove("search-flash"); }, 1700);
   }, 60);

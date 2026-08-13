@@ -248,7 +248,6 @@
   "In the coat closet by the front door": "Dans le placard près de la porte d'entrée",
   "In the closet": "Dans le placard",
   "Umbrella": "Parapluie",
-  "Coat closet — please return after use": "Placard à manteaux — merci de le rapporter après usage",
   "Luggage rack": "Porte-bagages",
   "Near the washer/dryer or in the closet": "Près de la laveuse-sécheuse ou dans le placard",
   "High chair": "Chaise haute",
@@ -462,7 +461,6 @@
   "If there's more than the indoor bins hold, use the black bin in the backyard.": "S'il y en a plus que ce que les bacs intérieurs peuvent contenir, utilisez le bac noir dans la cour arrière.",
   "Leave the bed as it is": "Laissez le lit tel quel",
   "Leave the space roughly as you found it": "Laissez l'espace à peu près comme vous l'avez trouvé",
-  "Leave your room door open or ajar, with the key in the doorknob.": "Laissez la porte de votre chambre ouverte ou entrouverte, avec la clé dans la poignée.",
   "Lock up": "Verrouillez",
   "No need to strip the bedding.": "Pas besoin de retirer les draps.",
   "On your way out": "En sortant",
@@ -563,7 +561,13 @@
   "<strong>Message us on Airbnb</strong> — it reaches both of us instantly, so it's the fastest way to get help: <a href=\"https://www.airbnb.com/guest/inbox\" target=\"_blank\" rel=\"noopener\">open your Airbnb messages</a>. Urgent, or no reply? <a href=\"tel:+16477079594\">Call</a> / <a href=\"https://wa.me/16477079594\">WhatsApp Pranay at 647-707-9594</a> · email <a href=\"mailto:namastaytoronto@gmail.com\">namastaytoronto@gmail.com</a>": "<strong>Écrivez-nous sur Airbnb</strong> — le message nous parvient à tous les deux instantanément, c’est donc le moyen le plus rapide d’obtenir de l’aide : <a href=\"https://www.airbnb.com/guest/inbox\" target=\"_blank\" rel=\"noopener\">ouvrez vos messages Airbnb</a>. Urgent, ou pas de réponse ? <a href=\"tel:+16477079594\">Appelez</a> / <a href=\"https://wa.me/16477079594\">WhatsApp: 647-707-9594</a> · courriel <a href=\"mailto:namastaytoronto@gmail.com\">namastaytoronto@gmail.com</a>",
   "<strong>Message us on Airbnb</strong> — it reaches both of us instantly, so it's the fastest way to get help: <a href=\"https://www.airbnb.com/guest/inbox\" target=\"_blank\" rel=\"noopener\">open your Airbnb messages</a>. Urgent, or no reply? Call <a href=\"tel:+16477079594\">Pranay 647-707-9594</a> / <a href=\"tel:+14165735624\">Emilee 416-573-5624</a> · <a href=\"https://wa.me/16477079594\">WhatsApp</a> · <a href=\"mailto:namastaytoronto@gmail.com\">namastaytoronto@gmail.com</a>": "<strong>Écrivez-nous sur Airbnb</strong> — le message nous parvient à tous les deux instantanément, c’est donc le moyen le plus rapide d’obtenir de l’aide : <a href=\"https://www.airbnb.com/guest/inbox\" target=\"_blank\" rel=\"noopener\">ouvrez vos messages Airbnb</a>. Urgent, ou pas de réponse ? <a href=\"tel:+16477079594\">Pranay 647-707-9594</a> / <a href=\"tel:+14165735624\">Emilee 416-573-5624</a> · <a href=\"https://wa.me/16477079594\">WhatsApp</a> · courriel <a href=\"mailto:namastaytoronto@gmail.com\">namastaytoronto@gmail.com</a>",
   "<b>Take the UP Express train toward the city</b><small>Runs ~5:30 AM – 1:00 AM. Buy tickets at airport kiosks, tap on/off with your credit or debit card, or <a href=\"https://www.upexpress.com/Fares\" target=\"_blank\" rel=\"noopener\">book online</a>.</small>": "<b>Prenez le train UP Express vers le centre-ville</b><small>Circule d'environ 5 h 30 à 1 h. Billets aux kiosques de l'aéroport, touchez votre carte de crédit ou de débit à l'entrée et à la sortie, ou <a href=\"https://www.upexpress.com/Fares\" target=\"_blank\" rel=\"noopener\">réservez en ligne</a>.</small>",
-  "For short stays, we recommend an <a href=\"https://airalo.tpx.lu/WeMywlPX\" target=\"_blank\" rel=\"noopener\">Airalo eSIM</a> — a good balance of cost, convenience and reliability.": "Pour un court séjour, nous vous recommandons une <a href=\"https://airalo.tpx.lu/WeMywlPX\" target=\"_blank\" rel=\"noopener\">eSIM Airalo</a> — un bon équilibre entre coût, confort et fiabilité."
+  "For short stays, we recommend an <a href=\"https://airalo.tpx.lu/WeMywlPX\" target=\"_blank\" rel=\"noopener\">Airalo eSIM</a> — a good balance of cost, convenience and reliability.": "Pour un court séjour, nous vous recommandons une <a href=\"https://airalo.tpx.lu/WeMywlPX\" target=\"_blank\" rel=\"noopener\">eSIM Airalo</a> — un bon équilibre entre coût, confort et fiabilité.",
+  "Leave the key in the doorknob — please don't take it with you!": "Laissez la clé dans la poignée — merci de ne pas l'emporter avec vous !",
+  "A lost key means cutting a new one and checking the lock — a $20 charge applies.": "Une clé perdue signifie qu'il faut en faire tailler une nouvelle et vérifier la serrure — des frais de 20 $ s'appliquent.",
+  "Leave your room door open or ajar": "Laissez la porte de votre chambre ouverte ou entrouverte",
+  "In the coat closet, or under the mailbox (wet ones dry off there). Please return after use.": "Dans le placard à manteaux, ou sous la boîte aux lettres (les parapluies mouillés y sèchent). Merci de le rapporter après usage.",
+  "🚕 Need a taxi?": "🚕 Besoin d'un taxi ?",
+  "Beck Taxi is Toronto's classic cab — call <a href=\"tel:+14167515555\">416-751-5555</a> or use the <a href=\"https://becktaxi.com\" target=\"_blank\" rel=\"noopener\">Beck Taxi app</a>. For airport runs, you can also <a href=\"https://tpx.lu/IW81zDSi\" target=\"_blank\" rel=\"noopener\">pre-book a fixed-price pickup</a> so a driver's waiting for you.": "Beck Taxi est le taxi classique de Toronto — appelez le <a href=\"tel:+14167515555\">416-751-5555</a> ou utilisez l'<a href=\"https://becktaxi.com\" target=\"_blank\" rel=\"noopener\">appli Beck Taxi</a>. Pour les trajets vers l'aéroport, vous pouvez aussi <a href=\"https://tpx.lu/IW81zDSi\" target=\"_blank\" rel=\"noopener\">réserver à l'avance un chauffeur à prix fixe</a> qui vous attendra."
  },
  "places": {
   "Cafe Paradise": {
